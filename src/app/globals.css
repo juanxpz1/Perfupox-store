@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
+/*
+ * Sistema visual Perfupox (Fase 2).
+ * Marfil para respirar, noche para los momentos de impacto, oro solo como luz.
+ * Tipografía: San Francisco en dispositivos Apple; Inter (autoalojada) en el resto.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --ivory: #f4efe6;
+  --paper: #fbf8f2;
+  --ink: #14120f;
+  --muted: #6e675c;
+  --line: #e2dacb;
+  --gold: #a7834a;
+  --gold-2: #c9a86a;
+  --night: #0f0e0c;
+  --night-2: #1a1815;
+  --night-fg: #f1eadc;
+  --night-muted: #a49c8c;
+  --ok: #3d7a55;
+  --warn: #a6612a;
+  --danger: #b0413e;
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not([data-theme="light"]) {
+    --ivory: #12110f;
+    --paper: #1a1815;
+    --ink: #efe8da;
+    --muted: #a39a89;
+    --line: #2e2a24;
+    --gold: #c9a86a;
+    --gold-2: #e0c48d;
+    --night: #080807;
+    --night-2: #141210;
+    --danger: #e0837e;
+    color-scheme: dark;
   }
 }
 
+:root[data-theme="dark"] {
+  --ivory: #12110f;
+  --paper: #1a1815;
+  --ink: #efe8da;
+  --muted: #a39a89;
+  --line: #2e2a24;
+  --gold: #c9a86a;
+  --gold-2: #e0c48d;
+  --night: #080807;
+  --night-2: #141210;
+  --danger: #e0837e;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-ivory: var(--ivory);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-gold: var(--gold);
+  --color-gold-2: var(--gold-2);
+  --color-night: var(--night);
+  --color-night-2: var(--night-2);
+  --color-night-fg: var(--night-fg);
+  --color-night-muted: var(--night-muted);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-danger: var(--danger);
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", var(--font-inter), "Segoe UI", system-ui, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", var(--font-inter), "Segoe UI", system-ui, sans-serif;
+  --radius-brand: 2px;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.028em;
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 1.5px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.gold-text {
+  background: linear-gradient(100deg, #8a6a32, #e9cf98 45%, #b08d57 70%, #7a5a28);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
