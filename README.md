@@ -90,7 +90,7 @@ git clone https://github.com/juanxpz1/Perfupox-store.git
 cd Perfupox-store
 npm install
 cp .env.example .env          # completa DATABASE_URL y TEST_DATABASE_URL
-npm run db:migrate            # crea las tablas
+npm run db:setup              # crea la base, las tablas, la configuración y el catálogo
 npm run db:seed               # configuración base (familias, categorías, ajustes, borradores legales)
 npm run db:import-catalog     # catálogo real de la tienda
 npm run dev                   # http://localhost:3000
