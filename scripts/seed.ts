@@ -30,7 +30,7 @@ const SETTINGS: Record<string, unknown> = {
     "Prueba antes de comprar: decants de 5 y 10 ml",
     "Paga por transferencia o a cuotas con Addi",
   ],
-  free_shipping_from: null,
+  free_shipping: { enabled: false, from: null },
   whatsapp: { number: "573233318497", enabled: true },
   qr_payment: {
     enabled: false,
@@ -109,6 +109,8 @@ async function main() {
       await tx.insert(s.categories).values({ name, slug: slugify(name), sortOrder: i }).onConflictDoNothing();
     }
     for (const [key, value] of Object.entries(SETTINGS)) {
+      // jsonb no admite null de JavaScript como valor de la fila: cada ajuste debe ser un objeto, lista, texto o número.
+      if (value === null || value === undefined) throw new Error(`El ajuste "${key}" no puede ser null.`);
       await tx.insert(s.storeSettings).values({ key, value }).onConflictDoNothing();
     }
     for (const [slug, title] of LEGAL_PAGES) {
