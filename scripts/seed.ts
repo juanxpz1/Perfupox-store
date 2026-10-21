@@ -9,7 +9,7 @@
  * Es idempotente: se puede ejecutar varias veces sin duplicar datos.
  */
 import { eq, sql } from "drizzle-orm";
-import { connect } from "./_db";
+import { connect, explainDbError } from "./_db";
 import * as s from "../src/db/schema";
 import { slugify } from "../src/lib/slug";
 
@@ -200,6 +200,7 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error("Error al cargar datos iniciales:", err);
+  console.error(`Error al cargar datos iniciales:
+${explainDbError(err)}`);
   process.exit(1);
 });

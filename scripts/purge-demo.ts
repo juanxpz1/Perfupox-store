@@ -3,7 +3,7 @@
  * Se ejecuta antes del lanzamiento. Exige confirmación explícita.
  */
 import { and, eq, inArray, like, sql } from "drizzle-orm";
-import { connect } from "./_db";
+import { connect, explainDbError } from "./_db";
 import * as s from "../src/db/schema";
 
 async function main() {
@@ -29,6 +29,7 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error("Error al borrar la demostración:", err);
+  console.error(`Error al borrar la demostración:
+${explainDbError(err)}`);
   process.exit(1);
 });

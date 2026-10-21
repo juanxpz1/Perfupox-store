@@ -1,5 +1,5 @@
 import { migrate } from "drizzle-orm/node-postgres/migrator";
-import { connect } from "./_db";
+import { connect, explainDbError } from "./_db";
 
 /** Aplica las migraciones pendientes de la carpeta drizzle/. Se ejecuta en cada despliegue antes de iniciar la app. */
 async function main() {
@@ -11,6 +11,7 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error("Error al aplicar migraciones:", err instanceof Error ? err.message : err);
+  console.error(`Error al aplicar migraciones:
+${explainDbError(err)}`);
   process.exit(1);
 });

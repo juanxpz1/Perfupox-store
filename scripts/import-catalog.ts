@@ -11,7 +11,7 @@
  */
 import { readFileSync } from "node:fs";
 import { and, eq } from "drizzle-orm";
-import { connect } from "./_db";
+import { connect, explainDbError } from "./_db";
 import * as s from "../src/db/schema";
 import { slugify } from "../src/lib/slug";
 import { buildSearchText } from "../src/modules/catalog/search-text";
@@ -121,6 +121,7 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error("Error al importar el catálogo:", err);
+  console.error(`Error al importar el catálogo:
+${explainDbError(err)}`);
   process.exit(1);
 });
