@@ -43,9 +43,22 @@ export type ServerEnv = z.infer<typeof serverSchema>;
 
 let cached: ServerEnv | undefined;
 
+/**
+ * Una variable escrita sin valor (`AUTH_SECRET=`) cuenta como no configurada,
+ * igual que si no estuviera. Así `.env.example` copiado tal cual funciona.
+ */
+function withoutEmpty(source: NodeJS.ProcessEnv): Record<string, string | undefined> {
+  const out: Record<string, string | undefined> = {};
+  for (const [k, v] of Object.entries(source)) {
+    const t = v?.trim();
+    out[k] = t ? t : undefined;
+  }
+  return out;
+}
+
 export function serverEnv(source: NodeJS.ProcessEnv = process.env): ServerEnv {
   if (cached && source === process.env) return cached;
-  const parsed = serverSchema.safeParse(source);
+  const parsed = serverSchema.safeParse(withoutEmpty(source));
   if (!parsed.success) {
     const detail = parsed.error.issues.map((i) => `  - ${i.path.join(".")}: ${i.message}`).join("\n");
     throw new Error(`Configuración inválida en variables de entorno:\n${detail}`);
