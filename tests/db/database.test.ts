@@ -147,4 +147,25 @@ suite("base de datos", () => {
   it("no permite borrar una marca con productos", async () => {
     await rejects(db.delete(s.brands).where(eq(s.brands.id, brandId)), "products_brand_id_brands_id_fk");
   });
+
+  it("con disponibilidad manual vende sin descontar unidades, y nada si está desactivada", async () => {
+    const [product] = await db.select().from(s.products).limit(1);
+    const [v] = await db
+      .insert(s.productVariants)
+      .values({ productId: product.id, sku: "T-DEC-5", kind: "DECANT", sizeMl: 5, price: 15_000, stock: 0, trackInventory: false })
+      .returning();
+    await expect(db.transaction((tx) => decrementStock(tx, { variantId: v.id, quantity: 3 }))).resolves.toBeNull();
+    const [after] = await db.select({ stock: s.productVariants.stock }).from(s.productVariants).where(eq(s.productVariants.id, v.id));
+    expect(after.stock).toBe(0);
+    const moves = await db.select().from(s.inventoryMovements).where(eq(s.inventoryMovements.variantId, v.id));
+    expect(moves).toHaveLength(0);
+    await db.update(s.productVariants).set({ isActive: false }).where(eq(s.productVariants.id, v.id));
+    await expect(db.transaction((tx) => decrementStock(tx, { variantId: v.id, quantity: 1 }))).rejects.toBeInstanceOf(InsufficientStockError);
+  });
+
+  it("permite frascos sin tamaño conocido pero no tamaños en cero", async () => {
+    const [product] = await db.select().from(s.products).limit(1);
+    await db.insert(s.productVariants).values({ productId: product.id, sku: "T-F-NULL", price: 100_000 });
+    await rejects(db.insert(s.productVariants).values({ productId: product.id, sku: "T-F-0", sizeMl: 0, price: 100_000 }), "variants_size_positive");
+  });
 });

@@ -26,12 +26,12 @@ const CATEGORIES = ["Árabes", "Diseñador", "Nicho", "Perfumería preparada", "
 
 const SETTINGS: Record<string, unknown> = {
   announcements: [
-    "Envío gratis desde $300.000",
-    "Paga a cuotas con Addi",
-    "Perfumes 100% originales · árabes y de diseñador",
+    "Perfumes originales árabes y de diseñador",
+    "Prueba antes de comprar: decants de 5 y 10 ml",
+    "Paga por transferencia o a cuotas con Addi",
   ],
-  free_shipping_from: 300_000,
-  whatsapp: { number: null, enabled: false },
+  free_shipping_from: null,
+  whatsapp: { number: "573233318497", enabled: true },
   qr_payment: {
     enabled: false,
     instructions: "POR CONFIGURAR: banco, titular y llave o código QR de la cuenta de la tienda.",
@@ -98,7 +98,7 @@ const DEMO_ZONES = [
 
 async function main() {
   const { db, pool } = connect();
-  const withDemo = process.env.SEED_DEMO !== "false";
+  const withDemo = process.env.SEED_DEMO === "true";
 
   await db.transaction(async (tx) => {
     // Familias y categorías

@@ -9,9 +9,9 @@ Pesos colombianos, español de Colombia, pagos por transferencia QR y a cuotas c
 |---|---|---|
 | 1 | Diagnóstico y arquitectura | Hecha |
 | 2 | Sistema visual y prototipo navegable | Hecha |
-| 3 | Proyecto, base de datos, migraciones, validaciones y configuración | **Hecha** |
-| 4 | Tienda pública: inicio, catálogo, filtros, búsqueda, ficha, cuentas | Pendiente |
-| 5 | Carrito, checkout, pedidos, pago QR, Addi y envíos | Pendiente |
+| 3 | Proyecto, base de datos, migraciones, validaciones y configuración | Hecha |
+| 4 | Tienda pública con el catálogo real: inicio, catálogo, filtros, búsqueda, ficha, bolsa, favoritos | **Hecha** |
+| 5 | Checkout, cuentas, pedidos, pago QR, Addi, envíos y correos | Pendiente |
 | 6 | Panel administrativo | Pendiente |
 | 7 | Calidad, accesibilidad y rendimiento | Pendiente |
 | 8 | Despliegue y documentación final | Pendiente |
@@ -54,6 +54,21 @@ tests/                 pruebas unitarias y de base de datos
 public/brand/          logotipo en versiones oro, tinta, monograma y horizontal
 ```
 
+## Catálogo real
+
+`data/catalogo-tienda-2026-10.json` se extrajo de los catálogos PDF de la tienda (mayo de 2026):
+
+- **68 perfumes originales** (59 árabes, 9 de diseñador), cada uno con frasco y decants de 5 y 10 ml.
+- **186 referencias de perfumería preparada** (64 mujer, 78 hombre, 44 unisex) en 30, 50, 60 y 100 ml.
+- Fotos de originales en `public/products/originales` y recortes sin fondo en `public/products/recortes`; frascos Perfupox en `public/products/preparada`.
+- La preparada **no usa fotos ni logotipos de la marca de referencia**: muestra el frasco Perfupox y el nombre de referencia como texto, con aviso de que no es el original.
+- Sin datos de la tienda, quedan vacíos y se completan en el panel: tamaño del frasco original, concentración, notas olfativas y familia.
+- La disponibilidad se marca a mano (`track_inventory = false`); cuando la tienda quiera contar unidades, se activa por presentación.
+
+```bash
+npm run db:import-catalog     # idempotente: crea o actualiza precios sin tocar la disponibilidad
+```
+
 ## Reglas de negocio clave
 
 - **Dinero en enteros.** Precios, descuentos y totales son pesos enteros. La base de datos rechaza un pedido cuyo total no sea `subtotal − descuento + envío`.
@@ -76,7 +91,8 @@ cd Perfupox-store
 npm install
 cp .env.example .env          # completa DATABASE_URL y TEST_DATABASE_URL
 npm run db:migrate            # crea las tablas
-npm run db:seed               # configuración base + catálogo de demostración
+npm run db:seed               # configuración base (familias, categorías, ajustes, borradores legales)
+npm run db:import-catalog     # catálogo real de la tienda
 npm run dev                   # http://localhost:3000
 ```
 
@@ -91,7 +107,8 @@ npm run dev                   # http://localhost:3000
 | `npm run check` | Todo lo anterior en orden |
 | `npm run db:generate` | Genera una migración nueva tras cambiar `src/db/schema` |
 | `npm run db:migrate` | Aplica migraciones pendientes |
-| `npm run db:seed` | Datos iniciales (idempotente). `SEED_DEMO=false` omite la demostración |
+| `npm run db:seed` | Datos iniciales (idempotente). `SEED_DEMO=true` agrega productos de demostración |
+| `npm run db:import-catalog` | Carga o actualiza el catálogo real desde `data/` |
 | `npm run db:purge-demo -- --confirmar` | Borra productos, marcas y zonas de demostración |
 
 ## Despliegue en Railway
@@ -100,13 +117,15 @@ npm run dev                   # http://localhost:3000
 2. Agrega un servicio **PostgreSQL** al mismo proyecto.
 3. En las variables del servicio de la app, crea `DATABASE_URL` con el valor `${{Postgres.DATABASE_URL}}` y `APP_URL` con el dominio de la tienda.
 4. `railway.json` ya define la compilación, la migración automática antes de cada despliegue y el arranque.
-5. Para cargar la configuración inicial una vez: desde la terminal de Railway, `npm run db:seed` (con `SEED_DEMO=false` en producción).
+5. Para cargar los datos una vez: desde la terminal de Railway, `npm run db:seed` y luego `npm run db:import-catalog`.
 
 ## Pendiente de confirmar por el propietario
 
-- Razón social, NIT, correo, WhatsApp, dirección y horario (`src/config/store.ts`).
+- Razón social, NIT, dirección y horario (`src/config/store.ts`). WhatsApp y correo ya están configurados.
+- Política de envío gratis (por ahora no se anuncia ninguna).
 - Datos de la cuenta y código QR para transferencias.
 - Cuenta de comercio aliado con Addi y sus credenciales.
 - Textos legales: términos, tratamiento de datos (Ley 1581 de 2012), cambios, devoluciones y retracto. Se crean como borradores sin publicar.
 - Zonas, tarifas y tiempos reales de envío (las actuales dicen «ejemplo»).
-- Listado de marcas e inventario real.
+- Tamaño de cada frasco original, notas olfativas y familias (se completan en el panel, Fase 6).
+- Fotos propias de los productos para reemplazar las tomadas de los catálogos.

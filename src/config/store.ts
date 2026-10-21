@@ -24,13 +24,16 @@ export const store = {
     instagram: "https://www.instagram.com/perfupoxstore",
   },
   contact: {
-    email: null as string | null, // POR CONFIRMAR
-    whatsapp: null as string | null, // POR CONFIRMAR, formato 57XXXXXXXXXX
-    address: null as string | null,
-    hours: null as string | null,
+    email: "perfupoxstore@gmail.com",
+    /** Formato internacional sin "+", para enlaces wa.me. */
+    whatsapp: "573233318497",
+    whatsappDisplay: "323 331 8497",
+    address: null as string | null, // POR CONFIRMAR
+    hours: null as string | null, // POR CONFIRMAR
   },
   defaults: {
-    freeShippingFrom: 300_000,
+    /** Umbral de envío gratis. Null mientras la tienda no defina su política. */
+    freeShippingFrom: null as number | null,
     lowStockThreshold: 3,
     maxQtyPerLine: 10,
     cartTtlDays: 30,

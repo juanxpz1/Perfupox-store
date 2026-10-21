@@ -13,6 +13,8 @@ export type PricedLine = {
   unitPrice: Cop;
   quantity: number;
   stock: number;
+  /** Si es falso, solo cuenta `isActive` (disponibilidad marcada a mano en el panel). */
+  trackInventory: boolean;
   isActive: boolean;
 };
 
@@ -96,6 +98,7 @@ export function checkLine(line: PricedLine, maxQty: number): LineProblem | null 
   if (!Number.isInteger(line.quantity) || line.quantity < 1 || line.quantity > maxQty)
     return { sku: line.sku, kind: "invalid_quantity" };
   if (!line.isActive) return { sku: line.sku, kind: "inactive" };
+  if (!line.trackInventory) return null;
   if (line.stock <= 0) return { sku: line.sku, kind: "out_of_stock" };
   if (line.quantity > line.stock) return { sku: line.sku, kind: "insufficient_stock", available: line.stock };
   return null;

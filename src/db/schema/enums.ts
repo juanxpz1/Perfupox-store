@@ -61,3 +61,6 @@ export const reviewStatusEnum = pgEnum("review_status", ["PENDIENTE", "PUBLICADA
 export const consentTypeEnum = pgEnum("consent_type", ["TRATAMIENTO_DATOS", "MARKETING", "TERMINOS"]);
 
 export const subscriptionStatusEnum = pgEnum("subscription_status", ["PENDIENTE", "CONFIRMADA", "CANCELADA"]);
+
+/** Tipo de presentación: frasco completo, decant (muestra de un original) o perfume preparado. */
+export const variantKindEnum = pgEnum("variant_kind", ["FRASCO", "DECANT", "PREPARADO"]);

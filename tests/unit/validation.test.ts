@@ -85,8 +85,8 @@ describe("productInputSchema", () => {
 
 describe("catalogQuerySchema", () => {
   it("ignora parámetros inválidos en la URL sin romper la página", () => {
-    const r = catalogQuerySchema.parse({ linea: "hackeo", orden: "<script>", pagina: "-3", genero: "mujer", marca: "lattafa" });
-    expect(r).toMatchObject({ linea: undefined, orden: "relevancia", pagina: 1, genero: "mujer", marca: ["lattafa"] });
+    const r = catalogQuerySchema.parse({ linea: "hackeo", orden: "<script>", pagina: "-3", genero: "mujer", marca: "lattafa", formato: "x" });
+    expect(r).toMatchObject({ linea: undefined, orden: "relevancia", pagina: 1, genero: "mujer", marca: ["lattafa"], formato: undefined });
   });
 });
 

@@ -1,4 +1,4 @@
-import { and, eq, gte, sql } from "drizzle-orm";
+import { and, eq, gte, or, sql } from "drizzle-orm";
 import type { NodePgDatabase } from "drizzle-orm/node-postgres";
 import type { PgTransaction } from "drizzle-orm/pg-core";
 import * as s from "@/db/schema";
@@ -17,24 +17,28 @@ export class InsufficientStockError extends Error {
  * así que dos compras simultáneas de la última unidad no pueden ganar ambas:
  * PostgreSQL bloquea la fila y la segunda ve el stock ya actualizado.
  * Debe ejecutarse dentro de la transacción que crea el pedido.
+ * Si la presentación no lleva conteo (`trackInventory = false`) solo verifica que esté
+ * disponible, no descuenta y no registra movimiento; en ese caso devuelve null.
  */
 export async function decrementStock(
   tx: Executor,
   args: { variantId: string; quantity: number; orderId?: string; userId?: string; reason?: string },
-): Promise<number> {
+): Promise<number | null> {
   if (!Number.isInteger(args.quantity) || args.quantity <= 0) throw new RangeError("Cantidad inválida.");
+  const v = s.productVariants;
   const [row] = await tx
-    .update(s.productVariants)
-    .set({ stock: sql`${s.productVariants.stock} - ${args.quantity}` })
+    .update(v)
+    .set({ stock: sql`CASE WHEN ${v.trackInventory} THEN ${v.stock} - ${args.quantity} ELSE ${v.stock} END` })
     .where(
       and(
-        eq(s.productVariants.id, args.variantId),
-        eq(s.productVariants.isActive, true),
-        gte(s.productVariants.stock, args.quantity),
+        eq(v.id, args.variantId),
+        eq(v.isActive, true),
+        or(eq(v.trackInventory, false), gte(v.stock, args.quantity)),
       ),
     )
-    .returning({ stock: s.productVariants.stock });
+    .returning({ stock: v.stock, tracked: v.trackInventory });
   if (!row) throw new InsufficientStockError(args.variantId);
+  if (!row.tracked) return null;
 
   await tx.insert(s.inventoryMovements).values({
     variantId: args.variantId,

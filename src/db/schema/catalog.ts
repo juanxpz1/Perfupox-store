@@ -11,7 +11,7 @@ import {
 } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
 import { createdAt, id, tsz, updatedAt } from "./_helpers";
-import { concentrationEnum, genderEnum, productLineEnum } from "./enums";
+import { concentrationEnum, genderEnum, productLineEnum, variantKindEnum } from "./enums";
 
 export const brands = pgTable("brands", {
   id: id(),
@@ -68,7 +68,8 @@ export const products = pgTable(
       .references(() => brands.id, { onDelete: "restrict" }),
     line: productLineEnum().notNull(),
     gender: genderEnum().notNull(),
-    concentration: concentrationEnum().notNull(),
+    /** Vacío si el catálogo de la tienda no la indica. */
+    concentration: concentrationEnum(),
     familyId: uuid().references(() => olfactoryFamilies.id, { onDelete: "set null" }),
     shortDescription: text(),
     description: text(),
@@ -76,6 +77,14 @@ export const products = pgTable(
     heartNotes: text().array().notNull().default(sql`'{}'::text[]`),
     baseNotes: text().array().notNull().default(sql`'{}'::text[]`),
     countryOfOrigin: text(),
+    /**
+     * Solo perfumería preparada: perfume de referencia y su casa. Se muestra como texto,
+     * nunca con fotos ni logotipos de la marca de referencia.
+     */
+    inspiredBy: text(),
+    inspiredByHouse: text(),
+    /** Texto normalizado (sin tildes, minúsculas) para la búsqueda. Lo calcula la aplicación. */
+    searchText: text().notNull().default(""),
     /** Un producto nuevo nace oculto hasta que el administrador lo publica. */
     isActive: boolean().notNull().default(false),
     isFeatured: boolean().notNull().default(false),
@@ -89,6 +98,7 @@ export const products = pgTable(
     index("products_listing_idx").on(t.isActive, t.line, t.gender),
     index("products_brand_idx").on(t.brandId),
     index("products_family_idx").on(t.familyId),
+    index("products_search_trgm_idx").using("gin", sql`${t.searchText} gin_trgm_ops`),
   ],
 );
 
@@ -101,12 +111,19 @@ export const productVariants = pgTable(
       .notNull()
       .references(() => products.id, { onDelete: "cascade" }),
     sku: text().notNull().unique(),
-    sizeMl: integer().notNull(),
+    kind: variantKindEnum().notNull().default("FRASCO"),
+    /** Puede quedar vacío si aún no se conoce el tamaño del frasco. */
+    sizeMl: integer(),
     /** Etiqueta opcional, por ejemplo «Intensidad alta» en perfumería preparada. */
     label: text(),
     price: integer().notNull(),
     compareAtPrice: integer(),
     stock: integer().notNull().default(0),
+    /**
+     * Si es falso, la disponibilidad depende solo de `isActive` (el administrador la marca a mano)
+     * y no se descuentan unidades. Útil para decants y preparados, que se hacen al momento.
+     */
+    trackInventory: boolean().notNull().default(true),
     lowStockThreshold: integer().notNull().default(3),
     weightGrams: integer(),
     isActive: boolean().notNull().default(true),
@@ -118,7 +135,7 @@ export const productVariants = pgTable(
     index("variants_product_idx").on(t.productId),
     check("variants_price_positive", sql`${t.price} > 0`),
     check("variants_stock_non_negative", sql`${t.stock} >= 0`),
-    check("variants_size_positive", sql`${t.sizeMl} > 0`),
+    check("variants_size_positive", sql`${t.sizeMl} IS NULL OR ${t.sizeMl} > 0`),
     check(
       "variants_compare_at_gt_price",
       sql`${t.compareAtPrice} IS NULL OR ${t.compareAtPrice} > ${t.price}`,

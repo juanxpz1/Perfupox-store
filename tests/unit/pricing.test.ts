@@ -16,6 +16,7 @@ const line = (over: Partial<PricedLine> = {}): PricedLine => ({
   unitPrice: 200_000,
   quantity: 1,
   stock: 5,
+  trackInventory: true,
   isActive: true,
   ...over,
 });
@@ -87,6 +88,13 @@ describe("calculateTotals", () => {
     expect(t.lineProblems.map((p) => p.kind)).toEqual(["out_of_stock", "inactive", "invalid_quantity", "invalid_quantity"]);
     // Las cantidades inválidas no suman al subtotal.
     expect(t.subtotal).toBe(400_000);
+  });
+
+  it("con disponibilidad manual ignora el conteo de unidades", () => {
+    const t = calculateTotals({ ...base, lines: [line({ stock: 0, quantity: 3, trackInventory: false })], destination: { department: "Antioquia", city: "Medellín" } });
+    expect(t.lineProblems).toEqual([]);
+    const off = calculateTotals({ ...base, lines: [line({ trackInventory: false, isActive: false })], destination: { department: "Antioquia", city: "Medellín" } });
+    expect(off.lineProblems[0].kind).toBe("inactive");
   });
 
   it("no permite checkout sin destino ni con carrito vacío", () => {
