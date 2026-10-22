@@ -4,6 +4,7 @@
  *
  * - Originales: frasco completo (tamaño por confirmar) + decants de 5 ml y 10 ml.
  * - Preparada: una ficha por perfume de referencia, con los tamaños y precios del catálogo de tamaños.
+ *   Su foto principal es la del perfume de referencia; la tienda muestra el frasco Perfupox al elegir tamaño.
  * - La disponibilidad se maneja a mano desde el panel (trackInventory = false): todo entra disponible.
  *
  * Es idempotente: si el producto ya existe (mismo slug) actualiza precios y datos básicos,
@@ -17,7 +18,7 @@ import { slugify } from "../src/lib/slug";
 import { buildSearchText } from "../src/modules/catalog/search-text";
 
 type Original = { name: string; brand: string; gender: "HOMBRE" | "MUJER" | "UNISEX"; price: number; decant5: number; decant10: number; image: string; slug: string };
-type Preparada = { inspiredBy: string; house: string; gender: "HOMBRE" | "MUJER" | "UNISEX"; slug: string };
+type Preparada = { inspiredBy: string; house: string; gender: "HOMBRE" | "MUJER" | "UNISEX"; slug: string; image: string };
 type Catalog = { originals: Original[]; preparadas: Preparada[]; preparadaSizes: { ml: number; price: number }[] };
 
 /** Casas árabes del catálogo. El resto de originales se clasifica como diseñador. */
@@ -72,8 +73,13 @@ async function main() {
         productId = row.id;
         const c = catId(category);
         if (c) await tx.insert(s.productCategories).values({ productId, categoryId: c }).onConflictDoNothing();
-        if (image) await tx.insert(s.productImages).values({ productId, url: image.url, alt: image.alt, sortOrder: 0 });
         stats.created++;
+      }
+      // La foto principal se sincroniza siempre con el catálogo: se crea si falta y se actualiza si cambió.
+      if (image) {
+        const [img] = await tx.select({ id: s.productImages.id, url: s.productImages.url }).from(s.productImages).where(and(eq(s.productImages.productId, productId), eq(s.productImages.sortOrder, 0)));
+        if (!img) await tx.insert(s.productImages).values({ productId, url: image.url, alt: image.alt, sortOrder: 0 });
+        else if (img.url !== image.url) await tx.update(s.productImages).set({ url: image.url, alt: image.alt }).where(eq(s.productImages.id, img.id));
       }
       for (const v of variants) {
         const [ev] = await tx.select({ id: s.productVariants.id }).from(s.productVariants).where(and(eq(s.productVariants.sku, v.sku)));
@@ -112,6 +118,7 @@ async function main() {
         },
         data.preparadaSizes.map((z, i) => ({ sku: `${base}-${z.ml}`, kind: "PREPARADO" as const, sizeMl: z.ml, label: `${z.ml} ml`, price: z.price, sortOrder: i })),
         "perfumeria-preparada",
+        { url: p.image, alt: `Foto de referencia: ${p.inspiredBy} de ${p.house}. El producto que recibes es la perfumería preparada Perfupox.` },
       );
     }
   });

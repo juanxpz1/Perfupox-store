@@ -5,11 +5,11 @@ const base = { DATABASE_URL: "postgresql://u:p@localhost:5432/db" } as unknown a
 
 describe("variables de entorno", () => {
   it("acepta .env.example copiado con los opcionales vacíos", () => {
-    const env = serverEnv({ ...base, AUTH_SECRET: "", STORAGE_ENDPOINT: "", STORAGE_PUBLIC_URL: "  ", ADDI_CLIENT_ID: "", DATABASE_SSL: "" });
+    const env = serverEnv({ ...base, AUTH_SECRET: "", STORAGE_ENDPOINT: "", STORAGE_PUBLIC_URL: "  ", DATABASE_SSL: "" });
     expect(env.AUTH_SECRET).toBeUndefined();
     expect(env.STORAGE_ENDPOINT).toBeUndefined();
     expect(env.DATABASE_SSL).toBe(false);
-    expect(integrations(env)).toEqual({ addi: false, storage: false, email: false, auth: false });
+    expect(integrations(env)).toEqual({ storage: false, email: false, auth: false });
   });
 
   it("sigue rechazando valores escritos pero inválidos", () => {

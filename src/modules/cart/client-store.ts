@@ -5,7 +5,7 @@ import { useSyncExternalStore } from "react";
 /**
  * Bolsa y favoritos del visitante, guardados en este navegador.
  * Solo se guardan identificadores y cantidades: los precios siempre se consultan al servidor.
- * En la Fase 5 la bolsa se sincroniza con la base de datos al iniciar sesión o pagar.
+ * La compra se cierra por WhatsApp: la bolsa arma el mensaje del pedido.
  */
 export type BagLine = { variantId: string; qty: number };
 type State = { bag: BagLine[]; favorites: string[]; lastAdded: { variantId: string; at: number } | null };

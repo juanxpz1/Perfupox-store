@@ -1,8 +1,8 @@
 /**
  * Flujo controlado de estados del pedido.
  *
- *  PENDIENTE_PAGO ──(cliente sube comprobante QR)──▶ PAGO_EN_VERIFICACION ──(personal aprueba)──▶ PAGO_CONFIRMADO
- *  PENDIENTE_PAGO ──(Addi confirma por notificación firmada)───────────────────────────────────▶ PAGO_CONFIRMADO
+ * Los pedidos llegan por WhatsApp y el personal los registra en el panel.
+ *  PENDIENTE_PAGO ──(llega el comprobante)──▶ PAGO_EN_VERIFICACION ──(personal verifica)──▶ PAGO_CONFIRMADO
  *  PAGO_CONFIRMADO ──▶ EN_PREPARACION ──▶ ENVIADO ──▶ ENTREGADO
  *  Cancelación posible antes del envío. Reembolso solo sobre pedidos pagados.
  *

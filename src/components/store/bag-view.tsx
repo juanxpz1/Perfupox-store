@@ -59,6 +59,7 @@ export function BagView() {
   const ids = bag.map((l) => l.variantId);
   const { data, error, retry } = usePriced(ids, []);
   const hydrated = useHydrated();
+  const [buyer, setBuyer] = useState({ name: "", city: "", notes: "" });
 
   if (!hydrated) return <div className="h-64 animate-pulse bg-paper" aria-busy="true" />;
   if (!bag.length)
@@ -93,8 +94,13 @@ export function BagView() {
     "Hola Perfupox, quiero hacer este pedido:",
     ...valid.map(({ l, v }) => `• ${Math.min(l.qty, v.maxQty)} × ${v.productName}${v.line === "PREPARADA" ? " (preparada)" : ` – ${v.brandName}`}, ${v.label ?? ""} [${v.sku}] – ${formatCop(v.price * Math.min(l.qty, v.maxQty))}`),
     `Subtotal: ${formatCop(subtotal)}`,
-    "¿Me confirmas disponibilidad y el valor del envío a mi ciudad?",
-  ].join("\n");
+    buyer.name.trim() ? `Nombre: ${buyer.name.trim()}` : null,
+    buyer.city.trim() ? `Ciudad: ${buyer.city.trim()}` : null,
+    buyer.notes.trim() ? `Nota: ${buyer.notes.trim()}` : null,
+    "¿Me confirmas disponibilidad, el valor del envío y la forma de pago?",
+  ]
+    .filter(Boolean)
+    .join("\n");
 
   return (
     <div className="grid gap-12 lg:grid-cols-[1fr_380px]">
@@ -158,6 +164,41 @@ export function BagView() {
             <dd>Según tu ciudad</dd>
           </div>
         </dl>
+        <fieldset className="mt-6 grid gap-3 border-t border-line pt-5">
+          <legend className="sr-only">Tus datos (opcionales)</legend>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">Agiliza tu pedido (opcional)</p>
+          {(
+            [
+              ["name", "Tu nombre", "text", "name", 60],
+              ["city", "Ciudad de entrega", "text", "address-level2", 60],
+            ] as const
+          ).map(([k, label, type, ac, max]) => (
+            <label key={k} className="grid gap-1 text-xs">
+              <span className="font-medium text-ink">{label}</span>
+              <input
+                id={`bolsa-${k}`}
+                type={type}
+                autoComplete={ac}
+                maxLength={max}
+                value={buyer[k]}
+                onChange={(e) => setBuyer((b) => ({ ...b, [k]: e.target.value }))}
+                className="border border-line bg-ivory px-3 py-2.5 text-sm text-ink outline-none focus:border-gold"
+              />
+            </label>
+          ))}
+          <label className="grid gap-1 text-xs">
+            <span className="font-medium text-ink">Nota para la tienda</span>
+            <textarea
+              id="bolsa-notes"
+              rows={2}
+              maxLength={200}
+              value={buyer.notes}
+              onChange={(e) => setBuyer((b) => ({ ...b, notes: e.target.value }))}
+              placeholder="Por ejemplo: es para regalo"
+              className="resize-none border border-line bg-ivory px-3 py-2.5 text-sm text-ink outline-none focus:border-gold"
+            />
+          </label>
+        </fieldset>
         <a
           href={whatsappLink(message)}
           target="_blank"
@@ -168,7 +209,7 @@ export function BagView() {
           <IconWhatsapp size={18} /> Pedir por WhatsApp
         </a>
         <p className="mt-4 text-xs text-muted">
-          Te enviamos el resumen de tu bolsa por WhatsApp para confirmar disponibilidad, envío y pago por transferencia QR o Addi. El pago en línea dentro de la tienda llega en la siguiente etapa.
+          Se abre WhatsApp con tu pedido listo para enviar. Allí te confirmamos disponibilidad, el valor del envío y la forma de pago: transferencia o a cuotas con Addi.
         </p>
       </aside>
     </div>

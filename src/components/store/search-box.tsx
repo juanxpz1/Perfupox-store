@@ -116,7 +116,7 @@ export function SearchBox({ className = "", autoFocus = false, onNavigate }: { c
                   onClick={() => go(`/perfume/${h.slug}`)}
                   className={`grid w-full grid-cols-[44px_1fr_auto] items-center gap-3 border-b border-line px-3 py-2.5 text-left ${i === sel ? "bg-ivory" : ""}`}
                 >
-                  <span className={`relative h-12 w-11 ${h.line === "PREPARADA" ? "bg-night" : "bg-white"}`}>
+                  <span className="relative h-12 w-11 bg-white">
                     <Image src={h.imageUrl ?? preparadaBottle(100)} alt="" fill sizes="44px" className="object-contain p-1" />
                   </span>
                   <span className="min-w-0">

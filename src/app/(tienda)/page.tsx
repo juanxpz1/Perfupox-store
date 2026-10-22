@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { HeroStage } from "@/components/store/hero-stage";
 import { ProductCard, ProductGridSkeleton } from "@/components/store/product-card";
-import { IconArrow, IconCard, IconQr, IconShield, IconWhatsapp, Star8 } from "@/components/icons";
+import { IconArrow, IconBag, IconCard, IconShield, IconWhatsapp, Star8 } from "@/components/icons";
 import { catalogCounts, homeSelection } from "@/modules/catalog/queries";
 import type { ProductLine } from "@/modules/catalog/types";
 import { formatCop } from "@/lib/money";
@@ -119,7 +119,7 @@ export default function HomePage() {
               {[
                 ["Originales", "Árabes y diseñador"],
                 ["5 y 10 ml", "Decants"],
-                ["Addi", "Paga a cuotas"],
+                ["WhatsApp", "Pedido y asesoría"],
               ].map(([b, s]) => (
                 <div key={b}>
                   <dt className="sr-only">{s}</dt>
@@ -243,12 +243,12 @@ export default function HomePage() {
       <section className={`${wrap} pb-24`} aria-label="Por qué comprar en Perfupox">
         <ul className="grid border-y border-line sm:grid-cols-2 lg:grid-cols-4">
           {[
-            [IconQr, "Transferencia con QR", "Escaneas, pagas desde tu banco y confirmamos tu pedido."],
-            [IconCard, "Paga a cuotas con Addi", "Divide tu compra sin tarjeta de crédito, sujeto a aprobación de Addi."],
+            [IconBag, "Pide por WhatsApp", "Arma tu bolsa y envíanos el pedido con un toque. Te respondemos para confirmarlo."],
+            [IconCard, "Paga como prefieras", "Transferencia o a cuotas con Addi. Lo coordinamos contigo por WhatsApp."],
             [IconShield, "Originales y preparada, claros", "Cada ficha indica si es un perfume original o de nuestra línea preparada."],
-            [IconWhatsapp, "Asesoría real", `Te ayudamos a elegir por WhatsApp al ${store.contact.whatsappDisplay}.`],
+            [IconWhatsapp, "Asesoría real", `Te ayudamos a elegir al ${store.contact.whatsappDisplay}.`],
           ].map(([Icon, t, d], i) => {
-            const I = Icon as typeof IconQr;
+            const I = Icon as typeof IconBag;
             return (
               <li key={t as string} className={`grid content-start gap-3 border-line p-7 ${i < 3 ? "lg:border-r" : ""} ${i % 2 === 0 ? "sm:border-r lg:border-r" : ""} ${i < 2 ? "border-b lg:border-b-0" : i === 2 ? "border-b sm:border-b-0" : ""}`}>
                 <I size={28} className="text-gold" />

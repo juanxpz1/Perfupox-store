@@ -1,58 +1,25 @@
 import { describe, expect, it } from "vitest";
-import { checkoutSchema } from "@/lib/validation/checkout";
 import { catalogQuerySchema, productInputSchema } from "@/lib/validation/catalog";
-import { phoneSchema } from "@/lib/validation/common";
+import { cleanText, departmentSchema, documentSchema, emailSchema, phoneSchema } from "@/lib/validation/common";
 import { formatCop, formatOrderNumber, percentOf } from "@/lib/money";
 import { slugify } from "@/lib/slug";
 
-const validCheckout = {
-  idempotencyKey: "0b5f0c2e-7a0b-4b39-9d2a-9a3f6e0c1d11",
-  email: "  Cliente@Correo.COM ",
-  customerName: "Laura   Gómez",
-  phone: "+57 300 123 4567",
-  documentId: "1.023.456.789",
-  shipping: {
-    recipientName: "Laura Gómez",
-    phone: "3001234567",
-    department: "Córdoba",
-    city: "Montería",
-    line1: "Calle 30 # 5-20",
-  },
-  paymentMethod: "TRANSFERENCIA_QR",
-  acceptTerms: true,
-};
-
-describe("checkoutSchema", () => {
-  it("normaliza correo, celular, documento y espacios", () => {
-    const r = checkoutSchema.parse(validCheckout);
-    expect(r.email).toBe("cliente@correo.com");
-    expect(r.phone).toBe("3001234567");
-    expect(r.documentId).toBe("1023456789");
-    expect(r.customerName).toBe("Laura Gómez");
+describe("datos colombianos", () => {
+  it("normaliza correo, celular y documento", () => {
+    expect(emailSchema.parse("  Cliente@Correo.COM ")).toBe("cliente@correo.com");
+    expect(phoneSchema.parse("+57 300 123 4567")).toBe("3001234567");
+    expect(documentSchema.parse("1.023.456.789")).toBe("1023456789");
   });
 
-  it("no acepta precios ni totales del navegador", () => {
-    const r = checkoutSchema.parse({ ...validCheckout, total: 1, subtotal: 1 });
-    expect(r).not.toHaveProperty("total");
-    expect(r).not.toHaveProperty("subtotal");
-  });
-
-  it("exige aceptar términos y un departamento válido", () => {
-    const r = checkoutSchema.safeParse({ ...validCheckout, acceptTerms: false, shipping: { ...validCheckout.shipping, department: "Gotham" } });
-    expect(r.success).toBe(false);
-    const paths = r.error!.issues.map((i) => i.path.join("."));
-    expect(paths).toContain("acceptTerms");
-    expect(paths).toContain("shipping.department");
-  });
-
-  it("rechaza celulares que no son colombianos", () => {
+  it("rechaza celulares que no son colombianos y departamentos inexistentes", () => {
     expect(phoneSchema.safeParse("6041234567").success).toBe(false);
     expect(phoneSchema.safeParse("30012345").success).toBe(false);
+    expect(departmentSchema.safeParse("Gotham").success).toBe(false);
+    expect(departmentSchema.safeParse("Córdoba").success).toBe(true);
   });
 
-  it("limpia caracteres de control", () => {
-    const r = checkoutSchema.parse({ ...validCheckout, customerNotes: "Dejar en\u0000 portería" });
-    expect(r.customerNotes).toBe("Dejar en portería");
+  it("limpia caracteres de control y espacios", () => {
+    expect(cleanText(80).parse("Dejar en\u0000   portería ")).toBe("Dejar en portería");
   });
 });
 

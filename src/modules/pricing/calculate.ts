@@ -4,7 +4,7 @@ import { normalizeSearch } from "@/lib/slug";
 /**
  * Cálculo de totales del pedido. Es una función pura: recibe los datos ya leídos de la
  * base de datos (precios, inventario, cupón, zonas) y nunca confía en importes del navegador.
- * El checkout la ejecuta en el servidor justo antes de crear el pedido.
+ * Se usa en el servidor al registrar un pedido (por ejemplo, uno recibido por WhatsApp desde el panel).
  */
 
 export type PricedLine = {

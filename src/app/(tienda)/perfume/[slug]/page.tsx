@@ -166,7 +166,7 @@ async function ProductPage({ params }: { params: Params }) {
               </Suspense>
             ),
           },
-          { t: "Pagos, cambios y devoluciones", c: <p>Pagas por transferencia con código QR o a cuotas con Addi. Un pedido pagado por transferencia se confirma cuando verificamos el pago. Las condiciones de cambios y devoluciones se publicarán con los términos de compra de la tienda.</p> },
+          { t: "Pedido, pago y cambios", c: <p>Agrega el perfume a tu bolsa y envía el pedido por WhatsApp. Allí confirmamos disponibilidad, valor del envío y forma de pago (transferencia o a cuotas con Addi). Las condiciones de cambios y devoluciones se publicarán con los términos de la tienda.</p> },
         ].map((s) => (
           <details key={s.t} open={s.open} className="group border-b border-line">
             <summary className="flex cursor-pointer list-none items-center justify-between py-5 text-xs font-semibold uppercase tracking-[0.2em] [&::-webkit-details-marker]:hidden">

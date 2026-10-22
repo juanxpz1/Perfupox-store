@@ -4,31 +4,32 @@ import { formatCop } from "@/lib/money";
 import { GENDER_LABELS, LINE_LABELS, preparadaBottle, type ProductCard as Card } from "@/modules/catalog/types";
 import { FavoriteButton } from "./favorite-button";
 
-/** Tarjeta de producto. Los originales muestran su foto; la preparada, el frasco Perfupox y su referencia en texto. */
+/** Tarjeta de producto. La preparada muestra la foto del perfume de referencia con una franja que la identifica como preparada. */
 export function ProductCard({ p, priority = false }: { p: Card; priority?: boolean }) {
   const isPrep = p.line === "PREPARADA";
   return (
     <article className="group relative flex min-w-0 flex-col gap-3">
       <Link
         href={`/perfume/${p.slug}`}
-        className={`relative block aspect-[4/5] overflow-hidden rounded-brand ${isPrep ? "bg-night" : "bg-white"}`}
+        className="relative block aspect-[4/5] overflow-hidden rounded-brand bg-white"
         aria-label={`${p.name}${isPrep ? `, referencia ${p.inspiredByHouse}` : ` de ${p.brandName}`}`}
       >
-        {isPrep ? (
+        {isPrep && p.imageUrl ? (
           <>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_85%,rgba(201,168,106,.28),transparent_60%)]" />
             <Image
-              src={preparadaBottle(100)}
-              alt=""
+              src={p.imageUrl}
+              alt={p.imageAlt ?? `Referencia: ${p.inspiredBy}`}
               fill
+              priority={priority}
               sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 22vw"
-              className="object-contain px-[28%] pb-[34%] pt-[6%] transition-transform duration-700 ease-out group-hover:-translate-y-2"
+              className="object-contain p-[9%] pb-[16%] transition-transform duration-700 ease-out group-hover:scale-[1.04]"
             />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-4 pt-10 text-center">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gold-2">Inspirado en</p>
-              <p className="mt-1 line-clamp-2 font-display text-lg font-semibold leading-tight text-night-fg">{p.inspiredBy}</p>
-            </div>
+            <span className="absolute inset-x-0 bottom-0 truncate bg-night/90 px-2 py-1.5 text-center text-[10px] font-semibold uppercase tracking-[0.14em] text-gold-2">
+              Preparada Perfupox
+            </span>
           </>
+        ) : isPrep ? (
+          <Image src={preparadaBottle(100)} alt="" fill sizes="22vw" className="object-contain px-[28%] py-[8%]" />
         ) : p.imageUrl ? (
           <Image
             src={p.imageUrl}

@@ -29,7 +29,7 @@ export async function generateMetadata({ searchParams }: { searchParams: SP }): 
   if (q.formato) canonical.set("formato", q.formato);
   return {
     title: titleFor(q),
-    description: "Perfumes originales árabes y de diseñador, decants de 5 y 10 ml y perfumería preparada. Pago por transferencia QR o a cuotas con Addi.",
+    description: "Perfumes originales árabes y de diseñador, decants de 5 y 10 ml y perfumería preparada. Pide por WhatsApp con asesoría personalizada.",
     alternates: { canonical: `/tienda${canonical.size ? `?${canonical}` : ""}` },
     robots: filtered ? { index: false, follow: true } : undefined,
   };

@@ -11,10 +11,10 @@ Pesos colombianos, español de Colombia, pagos por transferencia QR y a cuotas c
 | 2 | Sistema visual y prototipo navegable | Hecha |
 | 3 | Proyecto, base de datos, migraciones, validaciones y configuración | Hecha |
 | 4 | Tienda pública con el catálogo real: inicio, catálogo, filtros, búsqueda, ficha, bolsa, favoritos | **Hecha** |
-| 5 | Checkout, cuentas, pedidos, pago QR, Addi, envíos y correos | Pendiente |
-| 6 | Panel administrativo | Pendiente |
-| 7 | Calidad, accesibilidad y rendimiento | Pendiente |
-| 8 | Despliegue y documentación final | Pendiente |
+| — | ~~Pago dentro de la página~~ | Descartado por decisión de la tienda: los pedidos se cierran por WhatsApp |
+| 5 | Panel administrativo: disponibilidad, productos, precios, fotos, anuncios y registro de pedidos de WhatsApp | Pendiente |
+| 6 | Calidad, accesibilidad y rendimiento | Pendiente |
+| 7 | Despliegue en Railway y documentación final | Pendiente |
 
 ## Tecnologías
 
@@ -61,7 +61,9 @@ public/brand/          logotipo en versiones oro, tinta, monograma y horizontal
 - **68 perfumes originales** (59 árabes, 9 de diseñador), cada uno con frasco y decants de 5 y 10 ml.
 - **186 referencias de perfumería preparada** (64 mujer, 78 hombre, 44 unisex) en 30, 50, 60 y 100 ml.
 - Fotos de originales en `public/products/originales` y recortes sin fondo en `public/products/recortes`; frascos Perfupox en `public/products/preparada`.
-- La preparada **no usa fotos ni logotipos de la marca de referencia**: muestra el frasco Perfupox y el nombre de referencia como texto, con aviso de que no es el original.
+- La preparada muestra **la foto del perfume de referencia** (decisión de la tienda) con la franja «Preparada Perfupox»; al elegir el tamaño se muestra el frasco Perfupox en el que se entrega, y la ficha aclara que no es el producto original.
+- Al elegir un decant se muestra el atomizador Perfupox en el que se entrega.
+- Las fotos se mejoraron con superresolución (Real-ESRGAN) y fondo blanco uniforme. Fotos propias de la tienda siempre serán mejores.
 - Sin datos de la tienda, quedan vacíos y se completan en el panel: tamaño del frasco original, concentración, notas olfativas y familia.
 - La disponibilidad se marca a mano (`track_inventory = false`); cuando la tienda quiera contar unidades, se activa por presentación.
 
@@ -74,8 +76,7 @@ npm run db:import-catalog     # idempotente: crea o actualiza precios sin tocar 
 - **Dinero en enteros.** Precios, descuentos y totales son pesos enteros. La base de datos rechaza un pedido cuyo total no sea `subtotal − descuento + envío`.
 - **El servidor calcula todo.** El checkout recibe productos y cantidades, nunca precios ni totales. `modules/pricing` recalcula con datos de la base.
 - **Inventario sin sobreventa.** Las unidades se descuentan al crear el pedido con un `UPDATE … WHERE stock >= cantidad` dentro de la transacción. Probado con tres compras simultáneas de la última unidad: solo una gana. Si el pedido vence sin pago (24 h) o se cancela antes del envío, las unidades vuelven.
-- **Pago por QR.** El pedido queda en «pendiente de pago». El cliente sube el comprobante y pasa a «pago en verificación». Solo el personal puede confirmarlo.
-- **Pago con Addi.** Solo se confirma con la notificación firmada de Addi. Volver a la página de éxito no marca nada como pagado. Cada notificación se guarda una sola vez por su identificador.
+- **Compra por WhatsApp.** La bolsa arma el mensaje del pedido (productos, SKU, cantidades, subtotal y datos opcionales del cliente) con los precios vigentes de la base de datos. No hay pagos dentro de la página.
 - **Historial congelado.** Las líneas del pedido copian nombre, marca, SKU y precio.
 - **Pedidos sin duplicados.** Cada checkout lleva una clave de idempotencia única.
 - **Reseñas verificadas.** Una reseña por artículo comprado.
@@ -123,8 +124,6 @@ npm run dev                   # http://localhost:3000
 
 - Razón social, NIT, dirección y horario (`src/config/store.ts`). WhatsApp y correo ya están configurados.
 - Política de envío gratis (por ahora no se anuncia ninguna).
-- Datos de la cuenta y código QR para transferencias.
-- Cuenta de comercio aliado con Addi y sus credenciales.
 - Textos legales: términos, tratamiento de datos (Ley 1581 de 2012), cambios, devoluciones y retracto. Se crean como borradores sin publicar.
 - Zonas, tarifas y tiempos reales de envío (las actuales dicen «ejemplo»).
 - Tamaño de cada frasco original, notas olfativas y familias (se completan en el panel, Fase 6).

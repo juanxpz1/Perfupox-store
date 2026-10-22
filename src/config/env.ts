@@ -20,21 +20,14 @@ const serverSchema = z.object({
   // Autenticación (Fase 4)
   AUTH_SECRET: z.string().min(32, "AUTH_SECRET debe tener al menos 32 caracteres").optional(),
 
-  // Addi (Fase 5). Si faltan, el método Addi queda desactivado.
-  ADDI_CLIENT_ID: z.string().optional(),
-  ADDI_CLIENT_SECRET: z.string().optional(),
-  ADDI_ALLY_SLUG: z.string().optional(),
-  ADDI_ENVIRONMENT: z.enum(["staging", "production"]).default("staging"),
-  ADDI_CALLBACK_SECRET: z.string().optional(),
-
-  // Almacenamiento de imágenes y comprobantes (Fase 5/6)
+  // Almacenamiento de imágenes subidas desde el panel (opcional)
   STORAGE_BUCKET: z.string().optional(),
   STORAGE_ENDPOINT: z.string().url().optional(),
   STORAGE_ACCESS_KEY_ID: z.string().optional(),
   STORAGE_SECRET_ACCESS_KEY: z.string().optional(),
   STORAGE_PUBLIC_URL: z.string().url().optional(),
 
-  // Correo transaccional (Fase 5)
+  // Correo para avisos del panel (opcional)
   RESEND_API_KEY: z.string().optional(),
   EMAIL_FROM: z.string().optional(),
 });
@@ -70,7 +63,6 @@ export function serverEnv(source: NodeJS.ProcessEnv = process.env): ServerEnv {
 /** Qué integraciones externas tienen credenciales completas. Lo que no esté listo se oculta en la tienda. */
 export function integrations(env: ServerEnv = serverEnv()) {
   return {
-    addi: Boolean(env.ADDI_CLIENT_ID && env.ADDI_CLIENT_SECRET && env.ADDI_ALLY_SLUG && env.ADDI_CALLBACK_SECRET),
     storage: Boolean(env.STORAGE_BUCKET && env.STORAGE_ACCESS_KEY_ID && env.STORAGE_SECRET_ACCESS_KEY),
     email: Boolean(env.RESEND_API_KEY && env.EMAIL_FROM),
     auth: Boolean(env.AUTH_SECRET),

@@ -1,6 +1,6 @@
 {
  "source": "Catálogos Perfupox 2026-05 entregados por la tienda el 2026-10-21",
- "notes": "Precios en COP. Los tamaños de frasco de originales no venían en el catálogo: se completan en el panel. Notas olfativas y familias no se copiaron: las define el administrador.",
+ "notes": "Precios en COP. Los tamaños de frasco de originales no venían en el catálogo: se completan en el panel. Notas olfativas y familias no se copiaron: las define el administrador. Las preparadas usan como foto principal la del perfume de referencia (tomada del catálogo de la tienda); al elegir tamaño se muestra el frasco Perfupox.",
  "preparadaSizes": [
   {
    "ml": 30,
@@ -774,1117 +774,1303 @@
    "inspiredBy": "Scandal",
    "house": "Jean Paul Gaultier",
    "gender": "MUJER",
-   "slug": "preparada-scandal-jean-paul-gaultier"
+   "slug": "preparada-scandal-jean-paul-gaultier",
+   "image": "/products/referencias/scandal-jean-paul-gaultier.webp"
   },
   {
    "inspiredBy": "Ccori Crystal",
    "house": "Yanbal",
    "gender": "MUJER",
-   "slug": "preparada-ccori-crystal-yanbal"
+   "slug": "preparada-ccori-crystal-yanbal",
+   "image": "/products/referencias/ccori-crystal-yanbal.webp"
   },
   {
    "inspiredBy": "Good Girl Blush",
    "house": "Carolina Herrera",
    "gender": "MUJER",
-   "slug": "preparada-good-girl-blush-carolina-herrera"
+   "slug": "preparada-good-girl-blush-carolina-herrera",
+   "image": "/products/referencias/good-girl-blush-carolina-herrera.webp"
   },
   {
    "inspiredBy": "212 Sexy",
    "house": "Carolina Herrera",
    "gender": "MUJER",
-   "slug": "preparada-212-sexy-carolina-herrera"
+   "slug": "preparada-212-sexy-carolina-herrera",
+   "image": "/products/referencias/212-sexy-carolina-herrera.webp"
   },
   {
    "inspiredBy": "212 VIP Rosé",
    "house": "Carolina Herrera",
    "gender": "MUJER",
-   "slug": "preparada-212-vip-rose-carolina-herrera"
+   "slug": "preparada-212-vip-rose-carolina-herrera",
+   "image": "/products/referencias/212-vip-rose-carolina-herrera.webp"
   },
   {
    "inspiredBy": "Tommy Girl",
    "house": "Tommy Hilfiger",
    "gender": "MUJER",
-   "slug": "preparada-tommy-girl-tommy-hilfiger"
+   "slug": "preparada-tommy-girl-tommy-hilfiger",
+   "image": "/products/referencias/tommy-girl-tommy-hilfiger.webp"
   },
   {
    "inspiredBy": "Good Girl",
    "house": "Carolina Herrera",
    "gender": "MUJER",
-   "slug": "preparada-good-girl-carolina-herrera"
+   "slug": "preparada-good-girl-carolina-herrera",
+   "image": "/products/referencias/good-girl-carolina-herrera.webp"
   },
   {
    "inspiredBy": "Light Blue",
    "house": "Dolce&Gabbana",
    "gender": "MUJER",
-   "slug": "preparada-light-blue-dolce-y-gabbana"
+   "slug": "preparada-light-blue-dolce-y-gabbana",
+   "image": "/products/referencias/light-blue-dolce-y-gabbana.webp"
   },
   {
    "inspiredBy": "Osadía",
    "house": "Yanbal",
    "gender": "MUJER",
-   "slug": "preparada-osadia-yanbal"
+   "slug": "preparada-osadia-yanbal",
+   "image": "/products/referencias/osadia-yanbal.webp"
   },
   {
    "inspiredBy": "Cielo Eau de Parfum",
    "house": "Yanbal",
    "gender": "MUJER",
-   "slug": "preparada-cielo-eau-de-parfum-yanbal"
+   "slug": "preparada-cielo-eau-de-parfum-yanbal",
+   "image": "/products/referencias/cielo-eau-de-parfum-yanbal.webp"
   },
   {
    "inspiredBy": "Yum Yum",
    "house": "Armaf",
    "gender": "MUJER",
-   "slug": "preparada-yum-yum-armaf"
+   "slug": "preparada-yum-yum-armaf",
+   "image": "/products/referencias/yum-yum-armaf.webp"
   },
   {
    "inspiredBy": "Mayar",
    "house": "Lattafa",
    "gender": "MUJER",
-   "slug": "preparada-mayar-lattafa"
+   "slug": "preparada-mayar-lattafa",
+   "image": "/products/referencias/mayar-lattafa.webp"
   },
   {
    "inspiredBy": "Haya",
    "house": "Lattafa",
    "gender": "MUJER",
-   "slug": "preparada-haya-lattafa"
+   "slug": "preparada-haya-lattafa",
+   "image": "/products/referencias/haya-lattafa.webp"
   },
   {
    "inspiredBy": "Sorbetto Rosso",
    "house": "Escada",
    "gender": "MUJER",
-   "slug": "preparada-sorbetto-rosso-escada"
+   "slug": "preparada-sorbetto-rosso-escada",
+   "image": "/products/referencias/sorbetto-rosso-escada.webp"
   },
   {
    "inspiredBy": "Yara Candy",
    "house": "Lattafa",
    "gender": "MUJER",
-   "slug": "preparada-yara-candy-lattafa"
+   "slug": "preparada-yara-candy-lattafa",
+   "image": "/products/referencias/yara-candy-lattafa.webp"
   },
   {
    "inspiredBy": "Yara",
    "house": "Lattafa",
    "gender": "MUJER",
-   "slug": "preparada-yara-lattafa"
+   "slug": "preparada-yara-lattafa",
+   "image": "/products/referencias/yara-lattafa.webp"
   },
   {
    "inspiredBy": "La Vie Est Belle",
    "house": "Lancôme",
    "gender": "MUJER",
-   "slug": "preparada-la-vie-est-belle-lancome"
+   "slug": "preparada-la-vie-est-belle-lancome",
+   "image": "/products/referencias/la-vie-est-belle-lancome.webp"
   },
   {
    "inspiredBy": "Olympéa",
    "house": "Rabanne",
    "gender": "MUJER",
-   "slug": "preparada-olympea-rabanne"
+   "slug": "preparada-olympea-rabanne",
+   "image": "/products/referencias/olympea-rabanne.webp"
   },
   {
    "inspiredBy": "Yara Tous",
    "house": "Lattafa",
    "gender": "MUJER",
-   "slug": "preparada-yara-tous-lattafa"
+   "slug": "preparada-yara-tous-lattafa",
+   "image": "/products/referencias/yara-tous-lattafa.webp"
   },
   {
    "inspiredBy": "Can Can",
    "house": "Paris Hilton",
    "gender": "MUJER",
-   "slug": "preparada-can-can-paris-hilton"
+   "slug": "preparada-can-can-paris-hilton",
+   "image": "/products/referencias/can-can-paris-hilton.webp"
   },
   {
    "inspiredBy": "Crystal Noir",
    "house": "Versace",
    "gender": "MUJER",
-   "slug": "preparada-crystal-noir-versace"
+   "slug": "preparada-crystal-noir-versace",
+   "image": "/products/referencias/crystal-noir-versace.webp"
   },
   {
    "inspiredBy": "Carolina Herrera",
    "house": "Carolina Herrera",
    "gender": "MUJER",
-   "slug": "preparada-carolina-herrera-carolina-herrera"
+   "slug": "preparada-carolina-herrera-carolina-herrera",
+   "image": "/products/referencias/carolina-herrera-carolina-herrera.webp"
   },
   {
    "inspiredBy": "Cloud Pink",
    "house": "Ariana Grande",
    "gender": "MUJER",
-   "slug": "preparada-cloud-pink-ariana-grande"
+   "slug": "preparada-cloud-pink-ariana-grande",
+   "image": "/products/referencias/cloud-pink-ariana-grande.webp"
   },
   {
    "inspiredBy": "Cloud",
    "house": "Ariana Grande",
    "gender": "MUJER",
-   "slug": "preparada-cloud-ariana-grande"
+   "slug": "preparada-cloud-ariana-grande",
+   "image": "/products/referencias/cloud-ariana-grande.webp"
   },
   {
    "inspiredBy": "Delina",
    "house": "Parfums de Marly",
    "gender": "MUJER",
-   "slug": "preparada-delina-parfums-de-marly"
+   "slug": "preparada-delina-parfums-de-marly",
+   "image": "/products/referencias/delina-parfums-de-marly.webp"
   },
   {
    "inspiredBy": "Toy 2",
    "house": "Moschino",
    "gender": "MUJER",
-   "slug": "preparada-toy-2-moschino"
+   "slug": "preparada-toy-2-moschino",
+   "image": "/products/referencias/toy-2-moschino.webp"
   },
   {
    "inspiredBy": "J'adore",
    "house": "Dior",
    "gender": "MUJER",
-   "slug": "preparada-j-adore-dior"
+   "slug": "preparada-j-adore-dior",
+   "image": "/products/referencias/j-adore-dior.webp"
   },
   {
    "inspiredBy": "L'Eau d'Issey",
    "house": "Issey Miyake",
    "gender": "MUJER",
-   "slug": "preparada-l-eau-d-issey-issey-miyake"
+   "slug": "preparada-l-eau-d-issey-issey-miyake",
+   "image": "/products/referencias/l-eau-d-issey-issey-miyake.webp"
   },
   {
    "inspiredBy": "Fame",
    "house": "Rabanne",
    "gender": "MUJER",
-   "slug": "preparada-fame-rabanne"
+   "slug": "preparada-fame-rabanne",
+   "image": "/products/referencias/fame-rabanne.webp"
   },
   {
    "inspiredBy": "Thank U, Next",
    "house": "Ariana Grande",
    "gender": "MUJER",
-   "slug": "preparada-thank-u-next-ariana-grande"
+   "slug": "preparada-thank-u-next-ariana-grande",
+   "image": "/products/referencias/thank-u-next-ariana-grande.webp"
   },
   {
    "inspiredBy": "Temptation para Mujer",
    "house": "Yanbal",
    "gender": "MUJER",
-   "slug": "preparada-temptation-para-mujer-yanbal"
+   "slug": "preparada-temptation-para-mujer-yanbal",
+   "image": "/products/referencias/temptation-para-mujer-yanbal.webp"
   },
   {
    "inspiredBy": "360°",
    "house": "Perry Ellis",
    "gender": "MUJER",
-   "slug": "preparada-360-perry-ellis"
+   "slug": "preparada-360-perry-ellis",
+   "image": "/products/referencias/360-perry-ellis.webp"
   },
   {
    "inspiredBy": "Toy 2 Bubble Gum",
    "house": "Moschino",
    "gender": "MUJER",
-   "slug": "preparada-toy-2-bubble-gum-moschino"
+   "slug": "preparada-toy-2-bubble-gum-moschino",
+   "image": "/products/referencias/toy-2-bubble-gum-moschino.webp"
   },
   {
    "inspiredBy": "Miss Dior Eau de Parfum (2021)",
    "house": "Dior",
    "gender": "MUJER",
-   "slug": "preparada-miss-dior-eau-de-parfum-2021-dior"
+   "slug": "preparada-miss-dior-eau-de-parfum-2021-dior",
+   "image": "/products/referencias/miss-dior-eau-de-parfum-2021-dior.webp"
   },
   {
    "inspiredBy": "9pm pour Femme",
    "house": "Afnan",
    "gender": "MUJER",
-   "slug": "preparada-9pm-pour-femme-afnan"
+   "slug": "preparada-9pm-pour-femme-afnan",
+   "image": "/products/referencias/9pm-pour-femme-afnan.webp"
   },
   {
    "inspiredBy": "Paris Hilton",
    "house": "Paris Hilton",
    "gender": "MUJER",
-   "slug": "preparada-paris-hilton-paris-hilton"
+   "slug": "preparada-paris-hilton-paris-hilton",
+   "image": "/products/referencias/paris-hilton-paris-hilton.webp"
   },
   {
    "inspiredBy": "Burberry Her",
    "house": "Burberry",
    "gender": "MUJER",
-   "slug": "preparada-burberry-her-burberry"
+   "slug": "preparada-burberry-her-burberry",
+   "image": "/products/referencias/burberry-her-burberry.webp"
   },
   {
    "inspiredBy": "Selena Gomez Eau de Parfum",
    "house": "Selena Gomez",
    "gender": "MUJER",
-   "slug": "preparada-selena-gomez-eau-de-parfum-selena-gomez"
+   "slug": "preparada-selena-gomez-eau-de-parfum-selena-gomez",
+   "image": "/products/referencias/selena-gomez-eau-de-parfum-selena-gomez.webp"
   },
   {
    "inspiredBy": "La Bomba",
    "house": "Carolina Herrera",
    "gender": "MUJER",
-   "slug": "preparada-la-bomba-carolina-herrera"
+   "slug": "preparada-la-bomba-carolina-herrera",
+   "image": "/products/referencias/la-bomba-carolina-herrera.webp"
   },
   {
    "inspiredBy": "Mango Temptation",
    "house": "Victoria's Secret",
    "gender": "MUJER",
-   "slug": "preparada-mango-temptation-victoria-s-secret"
+   "slug": "preparada-mango-temptation-victoria-s-secret",
+   "image": "/products/referencias/mango-temptation-victoria-s-secret.webp"
   },
   {
    "inspiredBy": "Meow",
    "house": "Katy Perry",
    "gender": "MUJER",
-   "slug": "preparada-meow-katy-perry"
+   "slug": "preparada-meow-katy-perry",
+   "image": "/products/referencias/meow-katy-perry.webp"
   },
   {
    "inspiredBy": "Gaia",
    "house": "Yanbal",
    "gender": "MUJER",
-   "slug": "preparada-gaia-yanbal"
+   "slug": "preparada-gaia-yanbal",
+   "image": "/products/referencias/gaia-yanbal.webp"
   },
   {
    "inspiredBy": "Eclaire",
    "house": "Lattafa",
    "gender": "MUJER",
-   "slug": "preparada-eclaire-lattafa"
+   "slug": "preparada-eclaire-lattafa",
+   "image": "/products/referencias/eclaire-lattafa.webp"
   },
   {
    "inspiredBy": "Coconut Passion",
    "house": "Victoria's Secret",
    "gender": "MUJER",
-   "slug": "preparada-coconut-passion-victoria-s-secret"
+   "slug": "preparada-coconut-passion-victoria-s-secret",
+   "image": "/products/referencias/coconut-passion-victoria-s-secret.webp"
   },
   {
    "inspiredBy": "Chance Eau Vive",
    "house": "Chanel",
    "gender": "MUJER",
-   "slug": "preparada-chance-eau-vive-chanel"
+   "slug": "preparada-chance-eau-vive-chanel",
+   "image": "/products/referencias/chance-eau-vive-chanel.webp"
   },
   {
    "inspiredBy": "Coco Mademoiselle",
    "house": "Chanel",
    "gender": "MUJER",
-   "slug": "preparada-coco-mademoiselle-chanel"
+   "slug": "preparada-coco-mademoiselle-chanel",
+   "image": "/products/referencias/coco-mademoiselle-chanel.webp"
   },
   {
    "inspiredBy": "Acqua di Gioia",
    "house": "Giorgio Armani",
    "gender": "MUJER",
-   "slug": "preparada-acqua-di-gioia-giorgio-armani"
+   "slug": "preparada-acqua-di-gioia-giorgio-armani",
+   "image": "/products/referencias/acqua-di-gioia-giorgio-armani.webp"
   },
   {
    "inspiredBy": "Touch",
    "house": "Fred Hayman",
    "gender": "MUJER",
-   "slug": "preparada-touch-fred-hayman"
+   "slug": "preparada-touch-fred-hayman",
+   "image": "/products/referencias/touch-fred-hayman.webp"
   },
   {
    "inspiredBy": "Corvus",
    "house": "Ahli",
    "gender": "MUJER",
-   "slug": "preparada-corvus-ahli"
+   "slug": "preparada-corvus-ahli",
+   "image": "/products/referencias/corvus-ahli.webp"
   },
   {
    "inspiredBy": "Odyssey Candee",
    "house": "Armaf",
    "gender": "MUJER",
-   "slug": "preparada-odyssey-candee-armaf"
+   "slug": "preparada-odyssey-candee-armaf",
+   "image": "/products/referencias/odyssey-candee-armaf.webp"
   },
   {
    "inspiredBy": "Noble Blush",
    "house": "Lattafa",
    "gender": "MUJER",
-   "slug": "preparada-noble-blush-lattafa"
+   "slug": "preparada-noble-blush-lattafa",
+   "image": "/products/referencias/noble-blush-lattafa.webp"
   },
   {
    "inspiredBy": "Omnia Coral",
    "house": "Bvlgari",
    "gender": "MUJER",
-   "slug": "preparada-omnia-coral-bvlgari"
+   "slug": "preparada-omnia-coral-bvlgari",
+   "image": "/products/referencias/omnia-coral-bvlgari.webp"
   },
   {
    "inspiredBy": "9am pour Femme",
    "house": "Afnan",
    "gender": "MUJER",
-   "slug": "preparada-9am-pour-femme-afnan"
+   "slug": "preparada-9am-pour-femme-afnan",
+   "image": "/products/referencias/9am-pour-femme-afnan.webp"
   },
   {
    "inspiredBy": "Island Bliss",
    "house": "Armaf",
    "gender": "MUJER",
-   "slug": "preparada-island-bliss-armaf"
+   "slug": "preparada-island-bliss-armaf",
+   "image": "/products/referencias/island-bliss-armaf.webp"
   },
   {
    "inspiredBy": "Donna Born in Roma Green Stravaganza",
    "house": "Valentino",
    "gender": "MUJER",
-   "slug": "preparada-donna-born-in-roma-green-stravaganza-valentino"
+   "slug": "preparada-donna-born-in-roma-green-stravaganza-valentino",
+   "image": "/products/referencias/donna-born-in-roma-green-stravaganza-valentino.webp"
   },
   {
    "inspiredBy": "Donna Born in Roma",
    "house": "Valentino",
    "gender": "MUJER",
-   "slug": "preparada-donna-born-in-roma-valentino"
+   "slug": "preparada-donna-born-in-roma-valentino",
+   "image": "/products/referencias/donna-born-in-roma-valentino.webp"
   },
   {
    "inspiredBy": "Taj Sunset",
    "house": "Escada",
    "gender": "MUJER",
-   "slug": "preparada-taj-sunset-escada"
+   "slug": "preparada-taj-sunset-escada",
+   "image": "/products/referencias/taj-sunset-escada.webp"
   },
   {
    "inspiredBy": "Il Roso",
    "house": "ILMIN Parfums",
    "gender": "MUJER",
-   "slug": "preparada-il-roso-ilmin-parfums"
+   "slug": "preparada-il-roso-ilmin-parfums",
+   "image": "/products/referencias/il-roso-ilmin-parfums.webp"
   },
   {
    "inspiredBy": "Yara Elixir",
    "house": "Lattafa",
    "gender": "MUJER",
-   "slug": "preparada-yara-elixir-lattafa"
+   "slug": "preparada-yara-elixir-lattafa",
+   "image": "/products/referencias/yara-elixir-lattafa.webp"
   },
   {
    "inspiredBy": "Love, Don't Be Shy",
    "house": "Kilian",
    "gender": "MUJER",
-   "slug": "preparada-love-don-t-be-shy-kilian"
+   "slug": "preparada-love-don-t-be-shy-kilian",
+   "image": "/products/referencias/love-don-t-be-shy-kilian.webp"
   },
   {
    "inspiredBy": "Bright Crystal",
    "house": "Versace",
    "gender": "MUJER",
-   "slug": "preparada-bright-crystal-versace"
+   "slug": "preparada-bright-crystal-versace",
+   "image": "/products/referencias/bright-crystal-versace.webp"
   },
   {
    "inspiredBy": "Donna Born in Roma Intense",
    "house": "Valentino",
    "gender": "MUJER",
-   "slug": "preparada-donna-born-in-roma-intense-valentino"
+   "slug": "preparada-donna-born-in-roma-intense-valentino",
+   "image": "/products/referencias/donna-born-in-roma-intense-valentino.webp"
   },
   {
    "inspiredBy": "Miss Dior Parfum (2024)",
    "house": "Dior",
    "gender": "MUJER",
-   "slug": "preparada-miss-dior-parfum-2024-dior"
+   "slug": "preparada-miss-dior-parfum-2024-dior",
+   "image": "/products/referencias/miss-dior-parfum-2024-dior.webp"
   },
   {
    "inspiredBy": "Her Confession",
    "house": "Lattafa",
    "gender": "MUJER",
-   "slug": "preparada-her-confession-lattafa"
+   "slug": "preparada-her-confession-lattafa",
+   "image": "/products/referencias/her-confession-lattafa.webp"
   },
   {
    "inspiredBy": "Toy Boy",
    "house": "Moschino",
    "gender": "HOMBRE",
-   "slug": "preparada-toy-boy-moschino"
+   "slug": "preparada-toy-boy-moschino",
+   "image": "/products/referencias/toy-boy-moschino.webp"
   },
   {
    "inspiredBy": "Light Blue pour Homme",
    "house": "Dolce&Gabbana",
    "gender": "HOMBRE",
-   "slug": "preparada-light-blue-pour-homme-dolce-y-gabbana"
+   "slug": "preparada-light-blue-pour-homme-dolce-y-gabbana",
+   "image": "/products/referencias/light-blue-pour-homme-dolce-y-gabbana.webp"
   },
   {
    "inspiredBy": "Pour Homme Dylan Blue",
    "house": "Versace",
    "gender": "HOMBRE",
-   "slug": "preparada-pour-homme-dylan-blue-versace"
+   "slug": "preparada-pour-homme-dylan-blue-versace",
+   "image": "/products/referencias/pour-homme-dylan-blue-versace.webp"
   },
   {
    "inspiredBy": "Nautica Voyage",
    "house": "Nautica",
    "gender": "HOMBRE",
-   "slug": "preparada-nautica-voyage-nautica"
+   "slug": "preparada-nautica-voyage-nautica",
+   "image": "/products/referencias/nautica-voyage-nautica.webp"
   },
   {
    "inspiredBy": "Le Male Le Parfum",
    "house": "Jean Paul Gaultier",
    "gender": "HOMBRE",
-   "slug": "preparada-le-male-le-parfum-jean-paul-gaultier"
+   "slug": "preparada-le-male-le-parfum-jean-paul-gaultier",
+   "image": "/products/referencias/le-male-le-parfum-jean-paul-gaultier.webp"
   },
   {
    "inspiredBy": "Le Male Elixir",
    "house": "Jean Paul Gaultier",
    "gender": "HOMBRE",
-   "slug": "preparada-le-male-elixir-jean-paul-gaultier"
+   "slug": "preparada-le-male-elixir-jean-paul-gaultier",
+   "image": "/products/referencias/le-male-elixir-jean-paul-gaultier.webp"
   },
   {
    "inspiredBy": "Scandal Pour Homme",
    "house": "Jean Paul Gaultier",
    "gender": "HOMBRE",
-   "slug": "preparada-scandal-pour-homme-jean-paul-gaultier"
+   "slug": "preparada-scandal-pour-homme-jean-paul-gaultier",
+   "image": "/products/referencias/scandal-pour-homme-jean-paul-gaultier.webp"
   },
   {
    "inspiredBy": "Le Beau",
    "house": "Jean Paul Gaultier",
    "gender": "HOMBRE",
-   "slug": "preparada-le-beau-jean-paul-gaultier"
+   "slug": "preparada-le-beau-jean-paul-gaultier",
+   "image": "/products/referencias/le-beau-jean-paul-gaultier.webp"
   },
   {
    "inspiredBy": "Invictus Legend",
    "house": "Rabanne",
    "gender": "HOMBRE",
-   "slug": "preparada-invictus-legend-rabanne"
+   "slug": "preparada-invictus-legend-rabanne",
+   "image": "/products/referencias/invictus-legend-rabanne.webp"
   },
   {
    "inspiredBy": "Invictus Victory",
    "house": "Rabanne",
    "gender": "HOMBRE",
-   "slug": "preparada-invictus-victory-rabanne"
+   "slug": "preparada-invictus-victory-rabanne",
+   "image": "/products/referencias/invictus-victory-rabanne.webp"
   },
   {
    "inspiredBy": "Invictus",
    "house": "Rabanne",
    "gender": "HOMBRE",
-   "slug": "preparada-invictus-rabanne"
+   "slug": "preparada-invictus-rabanne",
+   "image": "/products/referencias/invictus-rabanne.webp"
   },
   {
    "inspiredBy": "Sauvage",
    "house": "Dior",
    "gender": "HOMBRE",
-   "slug": "preparada-sauvage-dior"
+   "slug": "preparada-sauvage-dior",
+   "image": "/products/referencias/sauvage-dior.webp"
   },
   {
    "inspiredBy": "Odyssey Mandarin Sky",
    "house": "Armaf",
    "gender": "HOMBRE",
-   "slug": "preparada-odyssey-mandarin-sky-armaf"
+   "slug": "preparada-odyssey-mandarin-sky-armaf",
+   "image": "/products/referencias/odyssey-mandarin-sky-armaf.webp"
   },
   {
    "inspiredBy": "Legend Spirit",
    "house": "Montblanc",
    "gender": "HOMBRE",
-   "slug": "preparada-legend-spirit-montblanc"
+   "slug": "preparada-legend-spirit-montblanc",
+   "image": "/products/referencias/legend-spirit-montblanc.webp"
   },
   {
    "inspiredBy": "Hugo Energise",
    "house": "Hugo Boss",
    "gender": "HOMBRE",
-   "slug": "preparada-hugo-energise-hugo-boss"
+   "slug": "preparada-hugo-energise-hugo-boss",
+   "image": "/products/referencias/hugo-energise-hugo-boss.webp"
   },
   {
    "inspiredBy": "Eros Flame",
    "house": "Versace",
    "gender": "HOMBRE",
-   "slug": "preparada-eros-flame-versace"
+   "slug": "preparada-eros-flame-versace",
+   "image": "/products/referencias/eros-flame-versace.webp"
   },
   {
    "inspiredBy": "Eros",
    "house": "Versace",
    "gender": "HOMBRE",
-   "slug": "preparada-eros-versace"
+   "slug": "preparada-eros-versace",
+   "image": "/products/referencias/eros-versace.webp"
   },
   {
    "inspiredBy": "Fakhar Black",
    "house": "Lattafa",
    "gender": "HOMBRE",
-   "slug": "preparada-fakhar-black-lattafa"
+   "slug": "preparada-fakhar-black-lattafa",
+   "image": "/products/referencias/fakhar-black-lattafa.webp"
   },
   {
    "inspiredBy": "Asad Bourbon",
    "house": "Lattafa",
    "gender": "HOMBRE",
-   "slug": "preparada-asad-bourbon-lattafa"
+   "slug": "preparada-asad-bourbon-lattafa",
+   "image": "/products/referencias/asad-bourbon-lattafa.webp"
   },
   {
    "inspiredBy": "Asad",
    "house": "Lattafa",
    "gender": "HOMBRE",
-   "slug": "preparada-asad-lattafa"
+   "slug": "preparada-asad-lattafa",
+   "image": "/products/referencias/asad-lattafa.webp"
   },
   {
    "inspiredBy": "Solo",
    "house": "Yanbal",
    "gender": "HOMBRE",
-   "slug": "preparada-solo-yanbal"
+   "slug": "preparada-solo-yanbal",
+   "image": "/products/referencias/solo-yanbal.webp"
   },
   {
    "inspiredBy": "King",
    "house": "Bharara",
    "gender": "HOMBRE",
-   "slug": "preparada-king-bharara"
+   "slug": "preparada-king-bharara",
+   "image": "/products/referencias/king-bharara.webp"
   },
   {
    "inspiredBy": "Acqua di Giò Profumo",
    "house": "Giorgio Armani",
    "gender": "HOMBRE",
-   "slug": "preparada-acqua-di-gio-profumo-giorgio-armani"
+   "slug": "preparada-acqua-di-gio-profumo-giorgio-armani",
+   "image": "/products/referencias/acqua-di-gio-profumo-giorgio-armani.webp"
   },
   {
    "inspiredBy": "Boss Unlimited",
    "house": "Hugo Boss",
    "gender": "HOMBRE",
-   "slug": "preparada-boss-unlimited-hugo-boss"
+   "slug": "preparada-boss-unlimited-hugo-boss",
+   "image": "/products/referencias/boss-unlimited-hugo-boss.webp"
   },
   {
    "inspiredBy": "Althaïr",
    "house": "Parfums de Marly",
    "gender": "HOMBRE",
-   "slug": "preparada-althair-parfums-de-marly"
+   "slug": "preparada-althair-parfums-de-marly",
+   "image": "/products/referencias/althair-parfums-de-marly.webp"
   },
   {
    "inspiredBy": "Acqua di Giò",
    "house": "Giorgio Armani",
    "gender": "HOMBRE",
-   "slug": "preparada-acqua-di-gio-giorgio-armani"
+   "slug": "preparada-acqua-di-gio-giorgio-armani",
+   "image": "/products/referencias/acqua-di-gio-giorgio-armani.webp"
   },
   {
    "inspiredBy": "Black XS",
    "house": "Rabanne",
    "gender": "HOMBRE",
-   "slug": "preparada-black-xs-rabanne"
+   "slug": "preparada-black-xs-rabanne",
+   "image": "/products/referencias/black-xs-rabanne.webp"
   },
   {
    "inspiredBy": "Club de Nuit Intense Man",
    "house": "Armaf",
    "gender": "HOMBRE",
-   "slug": "preparada-club-de-nuit-intense-man-armaf"
+   "slug": "preparada-club-de-nuit-intense-man-armaf",
+   "image": "/products/referencias/club-de-nuit-intense-man-armaf.webp"
   },
   {
    "inspiredBy": "Bleu Glacial",
    "house": "L'Bel",
    "gender": "HOMBRE",
-   "slug": "preparada-bleu-glacial-l-bel"
+   "slug": "preparada-bleu-glacial-l-bel",
+   "image": "/products/referencias/bleu-glacial-l-bel.webp"
   },
   {
    "inspiredBy": "Bleu de Chanel Eau de Parfum",
    "house": "Chanel",
    "gender": "HOMBRE",
-   "slug": "preparada-bleu-de-chanel-eau-de-parfum-chanel"
+   "slug": "preparada-bleu-de-chanel-eau-de-parfum-chanel",
+   "image": "/products/referencias/bleu-de-chanel-eau-de-parfum-chanel.webp"
   },
   {
    "inspiredBy": "L'Eau d'Issey Pour Homme",
    "house": "Issey Miyake",
    "gender": "HOMBRE",
-   "slug": "preparada-l-eau-d-issey-pour-homme-issey-miyake"
+   "slug": "preparada-l-eau-d-issey-pour-homme-issey-miyake",
+   "image": "/products/referencias/l-eau-d-issey-pour-homme-issey-miyake.webp"
   },
   {
    "inspiredBy": "Bad Boy",
    "house": "Carolina Herrera",
    "gender": "HOMBRE",
-   "slug": "preparada-bad-boy-carolina-herrera"
+   "slug": "preparada-bad-boy-carolina-herrera",
+   "image": "/products/referencias/bad-boy-carolina-herrera.webp"
   },
   {
    "inspiredBy": "Façonnable",
    "house": "Façonnable",
    "gender": "HOMBRE",
-   "slug": "preparada-faconnable-faconnable"
+   "slug": "preparada-faconnable-faconnable",
+   "image": "/products/referencias/faconnable-faconnable.webp"
   },
   {
    "inspiredBy": "Explorer",
    "house": "Montblanc",
    "gender": "HOMBRE",
-   "slug": "preparada-explorer-montblanc"
+   "slug": "preparada-explorer-montblanc",
+   "image": "/products/referencias/explorer-montblanc.webp"
   },
   {
    "inspiredBy": "212 Sexy Men",
    "house": "Carolina Herrera",
    "gender": "HOMBRE",
-   "slug": "preparada-212-sexy-men-carolina-herrera"
+   "slug": "preparada-212-sexy-men-carolina-herrera",
+   "image": "/products/referencias/212-sexy-men-carolina-herrera.webp"
   },
   {
    "inspiredBy": "Lacoste Essential Collector Edition",
    "house": "Lacoste",
    "gender": "HOMBRE",
-   "slug": "preparada-lacoste-essential-collector-edition-lacoste"
+   "slug": "preparada-lacoste-essential-collector-edition-lacoste",
+   "image": "/products/referencias/lacoste-essential-collector-edition-lacoste.webp"
   },
   {
    "inspiredBy": "Red",
    "house": "Lacoste",
    "gender": "HOMBRE",
-   "slug": "preparada-red-lacoste"
+   "slug": "preparada-red-lacoste",
+   "image": "/products/referencias/red-lacoste.webp"
   },
   {
    "inspiredBy": "Eau de Lacoste L.12.12. White",
    "house": "Lacoste",
    "gender": "HOMBRE",
-   "slug": "preparada-eau-de-lacoste-l-12-12-white-lacoste"
+   "slug": "preparada-eau-de-lacoste-l-12-12-white-lacoste",
+   "image": "/products/referencias/eau-de-lacoste-l-12-12-white-lacoste.webp"
   },
   {
    "inspiredBy": "1 Million Lucky",
    "house": "Rabanne",
    "gender": "HOMBRE",
-   "slug": "preparada-1-million-lucky-rabanne"
+   "slug": "preparada-1-million-lucky-rabanne",
+   "image": "/products/referencias/1-million-lucky-rabanne.webp"
   },
   {
    "inspiredBy": "9pm",
    "house": "Afnan",
    "gender": "HOMBRE",
-   "slug": "preparada-9pm-afnan"
+   "slug": "preparada-9pm-afnan",
+   "image": "/products/referencias/9pm-afnan.webp"
   },
   {
    "inspiredBy": "Polo Blue",
    "house": "Ralph Lauren",
    "gender": "HOMBRE",
-   "slug": "preparada-polo-blue-ralph-lauren"
+   "slug": "preparada-polo-blue-ralph-lauren",
+   "image": "/products/referencias/polo-blue-ralph-lauren.webp"
   },
   {
    "inspiredBy": "Paris Hilton for Men",
    "house": "Paris Hilton",
    "gender": "HOMBRE",
-   "slug": "preparada-paris-hilton-for-men-paris-hilton"
+   "slug": "preparada-paris-hilton-for-men-paris-hilton",
+   "image": "/products/referencias/paris-hilton-for-men-paris-hilton.webp"
   },
   {
    "inspiredBy": "1 Million",
    "house": "Rabanne",
    "gender": "HOMBRE",
-   "slug": "preparada-1-million-rabanne"
+   "slug": "preparada-1-million-rabanne",
+   "image": "/products/referencias/1-million-rabanne.webp"
   },
   {
    "inspiredBy": "Uomo Born in Roma Intense",
    "house": "Valentino",
    "gender": "HOMBRE",
-   "slug": "preparada-uomo-born-in-roma-intense-valentino"
+   "slug": "preparada-uomo-born-in-roma-intense-valentino",
+   "image": "/products/referencias/uomo-born-in-roma-intense-valentino.webp"
   },
   {
    "inspiredBy": "Tommy",
    "house": "Tommy Hilfiger",
    "gender": "HOMBRE",
-   "slug": "preparada-tommy-tommy-hilfiger"
+   "slug": "preparada-tommy-tommy-hilfiger",
+   "image": "/products/referencias/tommy-tommy-hilfiger.webp"
   },
   {
    "inspiredBy": "360° for Men",
    "house": "Perry Ellis",
    "gender": "HOMBRE",
-   "slug": "preparada-360-for-men-perry-ellis"
+   "slug": "preparada-360-for-men-perry-ellis",
+   "image": "/products/referencias/360-for-men-perry-ellis.webp"
   },
   {
    "inspiredBy": "Swiss Army",
    "house": "Victorinox",
    "gender": "HOMBRE",
-   "slug": "preparada-swiss-army-victorinox"
+   "slug": "preparada-swiss-army-victorinox",
+   "image": "/products/referencias/swiss-army-victorinox.webp"
   },
   {
    "inspiredBy": "Temptation",
    "house": "Yanbal",
    "gender": "HOMBRE",
-   "slug": "preparada-temptation-yanbal"
+   "slug": "preparada-temptation-yanbal",
+   "image": "/products/referencias/temptation-yanbal.webp"
   },
   {
    "inspiredBy": "Osadía Men",
    "house": "Yanbal",
    "gender": "HOMBRE",
-   "slug": "preparada-osadia-men-yanbal"
+   "slug": "preparada-osadia-men-yanbal",
+   "image": "/products/referencias/osadia-men-yanbal.webp"
   },
   {
    "inspiredBy": "212 VIP Black",
    "house": "Carolina Herrera",
    "gender": "HOMBRE",
-   "slug": "preparada-212-vip-black-carolina-herrera"
+   "slug": "preparada-212-vip-black-carolina-herrera",
+   "image": "/products/referencias/212-vip-black-carolina-herrera.webp"
   },
   {
    "inspiredBy": "212 Men",
    "house": "Carolina Herrera",
    "gender": "HOMBRE",
-   "slug": "preparada-212-men-carolina-herrera"
+   "slug": "preparada-212-men-carolina-herrera",
+   "image": "/products/referencias/212-men-carolina-herrera.webp"
   },
   {
    "inspiredBy": "Phantom",
    "house": "Rabanne",
    "gender": "HOMBRE",
-   "slug": "preparada-phantom-rabanne"
+   "slug": "preparada-phantom-rabanne",
+   "image": "/products/referencias/phantom-rabanne.webp"
   },
   {
    "inspiredBy": "Ohm",
    "house": "Yanbal",
    "gender": "HOMBRE",
-   "slug": "preparada-ohm-yanbal"
+   "slug": "preparada-ohm-yanbal",
+   "image": "/products/referencias/ohm-yanbal.webp"
   },
   {
    "inspiredBy": "Odyssey Homme White Edition",
    "house": "Armaf",
    "gender": "HOMBRE",
-   "slug": "preparada-odyssey-homme-white-edition-armaf"
+   "slug": "preparada-odyssey-homme-white-edition-armaf",
+   "image": "/products/referencias/odyssey-homme-white-edition-armaf.webp"
   },
   {
    "inspiredBy": "Fahrenheit",
    "house": "Dior",
    "gender": "HOMBRE",
-   "slug": "preparada-fahrenheit-dior"
+   "slug": "preparada-fahrenheit-dior",
+   "image": "/products/referencias/fahrenheit-dior.webp"
   },
   {
    "inspiredBy": "Khamrah Dukhan",
    "house": "Lattafa",
    "gender": "HOMBRE",
-   "slug": "preparada-khamrah-dukhan-lattafa"
+   "slug": "preparada-khamrah-dukhan-lattafa",
+   "image": "/products/referencias/khamrah-dukhan-lattafa.webp"
   },
   {
    "inspiredBy": "Imagination",
    "house": "Louis Vuitton",
    "gender": "HOMBRE",
-   "slug": "preparada-imagination-louis-vuitton"
+   "slug": "preparada-imagination-louis-vuitton",
+   "image": "/products/referencias/imagination-louis-vuitton.webp"
   },
   {
    "inspiredBy": "Stronger With You Intensely",
    "house": "Giorgio Armani",
    "gender": "HOMBRE",
-   "slug": "preparada-stronger-with-you-intensely-giorgio-armani"
+   "slug": "preparada-stronger-with-you-intensely-giorgio-armani",
+   "image": "/products/referencias/stronger-with-you-intensely-giorgio-armani.webp"
   },
   {
    "inspiredBy": "Kalan",
    "house": "Parfums de Marly",
    "gender": "HOMBRE",
-   "slug": "preparada-kalan-parfums-de-marly"
+   "slug": "preparada-kalan-parfums-de-marly",
+   "image": "/products/referencias/kalan-parfums-de-marly.webp"
   },
   {
    "inspiredBy": "Sauvage Elixir",
    "house": "Dior",
    "gender": "HOMBRE",
-   "slug": "preparada-sauvage-elixir-dior"
+   "slug": "preparada-sauvage-elixir-dior",
+   "image": "/products/referencias/sauvage-elixir-dior.webp"
   },
   {
    "inspiredBy": "9 PM Rebel",
    "house": "Afnan",
    "gender": "HOMBRE",
-   "slug": "preparada-9-pm-rebel-afnan"
+   "slug": "preparada-9-pm-rebel-afnan",
+   "image": "/products/referencias/9-pm-rebel-afnan.webp"
   },
   {
    "inspiredBy": "Hawas Ice",
    "house": "Rasasi",
    "gender": "HOMBRE",
-   "slug": "preparada-hawas-ice-rasasi"
+   "slug": "preparada-hawas-ice-rasasi",
+   "image": "/products/referencias/hawas-ice-rasasi.webp"
   },
   {
    "inspiredBy": "Nitro Red",
    "house": "Dumont",
    "gender": "HOMBRE",
-   "slug": "preparada-nitro-red-dumont"
+   "slug": "preparada-nitro-red-dumont",
+   "image": "/products/referencias/nitro-red-dumont.webp"
   },
   {
    "inspiredBy": "Noir Extreme",
    "house": "Tom Ford",
    "gender": "HOMBRE",
-   "slug": "preparada-noir-extreme-tom-ford"
+   "slug": "preparada-noir-extreme-tom-ford",
+   "image": "/products/referencias/noir-extreme-tom-ford.webp"
   },
   {
    "inspiredBy": "Odyssey Homme",
    "house": "Armaf",
    "gender": "HOMBRE",
-   "slug": "preparada-odyssey-homme-armaf"
+   "slug": "preparada-odyssey-homme-armaf",
+   "image": "/products/referencias/odyssey-homme-armaf.webp"
   },
   {
    "inspiredBy": "Le Beau Le Parfum",
    "house": "Jean Paul Gaultier",
    "gender": "HOMBRE",
-   "slug": "preparada-le-beau-le-parfum-jean-paul-gaultier"
+   "slug": "preparada-le-beau-le-parfum-jean-paul-gaultier",
+   "image": "/products/referencias/le-beau-le-parfum-jean-paul-gaultier.webp"
   },
   {
    "inspiredBy": "Boss Bottled Night",
    "house": "Hugo Boss",
    "gender": "HOMBRE",
-   "slug": "preparada-boss-bottled-night-hugo-boss"
+   "slug": "preparada-boss-bottled-night-hugo-boss",
+   "image": "/products/referencias/boss-bottled-night-hugo-boss.webp"
   },
   {
    "inspiredBy": "Black XS L'Aphrodisiaque for Men",
    "house": "Rabanne",
    "gender": "HOMBRE",
-   "slug": "preparada-black-xs-l-aphrodisiaque-for-men-rabanne"
+   "slug": "preparada-black-xs-l-aphrodisiaque-for-men-rabanne",
+   "image": "/products/referencias/black-xs-l-aphrodisiaque-for-men-rabanne.webp"
   },
   {
    "inspiredBy": "Uomo Born in Roma",
    "house": "Valentino",
    "gender": "HOMBRE",
-   "slug": "preparada-uomo-born-in-roma-valentino"
+   "slug": "preparada-uomo-born-in-roma-valentino",
+   "image": "/products/referencias/uomo-born-in-roma-valentino.webp"
   },
   {
    "inspiredBy": "Starwalker",
    "house": "Montblanc",
    "gender": "HOMBRE",
-   "slug": "preparada-starwalker-montblanc"
+   "slug": "preparada-starwalker-montblanc",
+   "image": "/products/referencias/starwalker-montblanc.webp"
   },
   {
    "inspiredBy": "Man in Black",
    "house": "Bvlgari",
    "gender": "HOMBRE",
-   "slug": "preparada-man-in-black-bvlgari"
+   "slug": "preparada-man-in-black-bvlgari",
+   "image": "/products/referencias/man-in-black-bvlgari.webp"
   },
   {
    "inspiredBy": "Y Eau de Parfum",
    "house": "Yves Saint Laurent",
    "gender": "HOMBRE",
-   "slug": "preparada-y-eau-de-parfum-yves-saint-laurent"
+   "slug": "preparada-y-eau-de-parfum-yves-saint-laurent",
+   "image": "/products/referencias/y-eau-de-parfum-yves-saint-laurent.webp"
   },
   {
    "inspiredBy": "Asad Elixir",
    "house": "Lattafa",
    "gender": "HOMBRE",
-   "slug": "preparada-asad-elixir-lattafa"
+   "slug": "preparada-asad-elixir-lattafa",
+   "image": "/products/referencias/asad-elixir-lattafa.webp"
   },
   {
    "inspiredBy": "9am Dive",
    "house": "Afnan",
    "gender": "HOMBRE",
-   "slug": "preparada-9am-dive-afnan"
+   "slug": "preparada-9am-dive-afnan",
+   "image": "/products/referencias/9am-dive-afnan.webp"
   },
   {
    "inspiredBy": "Uomo Born in Roma Ivory",
    "house": "Valentino",
    "gender": "HOMBRE",
-   "slug": "preparada-uomo-born-in-roma-ivory-valentino"
+   "slug": "preparada-uomo-born-in-roma-ivory-valentino",
+   "image": "/products/referencias/uomo-born-in-roma-ivory-valentino.webp"
   },
   {
    "inspiredBy": "Odyssey Aqua Edition",
    "house": "Armaf",
    "gender": "HOMBRE",
-   "slug": "preparada-odyssey-aqua-edition-armaf"
+   "slug": "preparada-odyssey-aqua-edition-armaf",
+   "image": "/products/referencias/odyssey-aqua-edition-armaf.webp"
   },
   {
    "inspiredBy": "Hawas Fire",
    "house": "Rasasi",
    "gender": "HOMBRE",
-   "slug": "preparada-hawas-fire-rasasi"
+   "slug": "preparada-hawas-fire-rasasi",
+   "image": "/products/referencias/hawas-fire-rasasi.webp"
   },
   {
    "inspiredBy": "Le Beau Paradise Garden",
    "house": "Jean Paul Gaultier",
    "gender": "HOMBRE",
-   "slug": "preparada-le-beau-paradise-garden-jean-paul-gaultier"
+   "slug": "preparada-le-beau-paradise-garden-jean-paul-gaultier",
+   "image": "/products/referencias/le-beau-paradise-garden-jean-paul-gaultier.webp"
   },
   {
    "inspiredBy": "Oud Maracujá",
    "house": "Maison Crivelli",
    "gender": "UNISEX",
-   "slug": "preparada-oud-maracuja-maison-crivelli"
+   "slug": "preparada-oud-maracuja-maison-crivelli",
+   "image": "/products/referencias/oud-maracuja-maison-crivelli.webp"
   },
   {
    "inspiredBy": "Khamrah Qahwa",
    "house": "Lattafa",
    "gender": "UNISEX",
-   "slug": "preparada-khamrah-qahwa-lattafa"
+   "slug": "preparada-khamrah-qahwa-lattafa",
+   "image": "/products/referencias/khamrah-qahwa-lattafa.webp"
   },
   {
    "inspiredBy": "Khamrah",
    "house": "Lattafa",
    "gender": "UNISEX",
-   "slug": "preparada-khamrah-lattafa"
+   "slug": "preparada-khamrah-lattafa",
+   "image": "/products/referencias/khamrah-lattafa.webp"
   },
   {
    "inspiredBy": "Ombre Nomade",
    "house": "Louis Vuitton",
    "gender": "UNISEX",
-   "slug": "preparada-ombre-nomade-louis-vuitton"
+   "slug": "preparada-ombre-nomade-louis-vuitton",
+   "image": "/products/referencias/ombre-nomade-louis-vuitton.webp"
   },
   {
    "inspiredBy": "Il Femme",
    "house": "ILMIN Parfums",
    "gender": "UNISEX",
-   "slug": "preparada-il-femme-ilmin-parfums"
+   "slug": "preparada-il-femme-ilmin-parfums",
+   "image": "/products/referencias/il-femme-ilmin-parfums.webp"
   },
   {
    "inspiredBy": "Starry Nights",
    "house": "Montale",
    "gender": "UNISEX",
-   "slug": "preparada-starry-nights-montale"
+   "slug": "preparada-starry-nights-montale",
+   "image": "/products/referencias/starry-nights-montale.webp"
   },
   {
    "inspiredBy": "Arabians Tonka",
    "house": "Montale",
    "gender": "UNISEX",
-   "slug": "preparada-arabians-tonka-montale"
+   "slug": "preparada-arabians-tonka-montale",
+   "image": "/products/referencias/arabians-tonka-montale.webp"
   },
   {
    "inspiredBy": "Il Kakuno",
    "house": "ILMIN Parfums",
    "gender": "UNISEX",
-   "slug": "preparada-il-kakuno-ilmin-parfums"
+   "slug": "preparada-il-kakuno-ilmin-parfums",
+   "image": "/products/referencias/il-kakuno-ilmin-parfums.webp"
   },
   {
    "inspiredBy": "Odyssey Dubai Chocolat",
    "house": "Armaf",
    "gender": "UNISEX",
-   "slug": "preparada-odyssey-dubai-chocolat-armaf"
+   "slug": "preparada-odyssey-dubai-chocolat-armaf",
+   "image": "/products/referencias/odyssey-dubai-chocolat-armaf.webp"
   },
   {
    "inspiredBy": "Bade'e Al Oud for Glory",
    "house": "Lattafa",
    "gender": "UNISEX",
-   "slug": "preparada-bade-e-al-oud-for-glory-lattafa"
+   "slug": "preparada-bade-e-al-oud-for-glory-lattafa",
+   "image": "/products/referencias/bade-e-al-oud-for-glory-lattafa.webp"
   },
   {
    "inspiredBy": "Bade'e Al Oud Honor & Glory",
    "house": "Lattafa",
    "gender": "UNISEX",
-   "slug": "preparada-bade-e-al-oud-honor-y-glory-lattafa"
+   "slug": "preparada-bade-e-al-oud-honor-y-glory-lattafa",
+   "image": "/products/referencias/bade-e-al-oud-honor-y-glory-lattafa.webp"
   },
   {
    "inspiredBy": "Bade'e Al Oud Amethyst",
    "house": "Lattafa",
    "gender": "UNISEX",
-   "slug": "preparada-bade-e-al-oud-amethyst-lattafa"
+   "slug": "preparada-bade-e-al-oud-amethyst-lattafa",
+   "image": "/products/referencias/bade-e-al-oud-amethyst-lattafa.webp"
   },
   {
    "inspiredBy": "Bade'e Al Oud Sublime",
    "house": "Lattafa",
    "gender": "UNISEX",
-   "slug": "preparada-bade-e-al-oud-sublime-lattafa"
+   "slug": "preparada-bade-e-al-oud-sublime-lattafa",
+   "image": "/products/referencias/bade-e-al-oud-sublime-lattafa.webp"
   },
   {
    "inspiredBy": "Santal 33",
    "house": "Le Labo",
    "gender": "UNISEX",
-   "slug": "preparada-santal-33-le-labo"
+   "slug": "preparada-santal-33-le-labo",
+   "image": "/products/referencias/santal-33-le-labo.webp"
   },
   {
    "inspiredBy": "Amber Oud Gold Edition",
    "house": "Al Haramain",
    "gender": "UNISEX",
-   "slug": "preparada-amber-oud-gold-edition-al-haramain"
+   "slug": "preparada-amber-oud-gold-edition-al-haramain",
+   "image": "/products/referencias/amber-oud-gold-edition-al-haramain.webp"
   },
   {
    "inspiredBy": "Vega",
    "house": "Ahli",
    "gender": "UNISEX",
-   "slug": "preparada-vega-ahli"
+   "slug": "preparada-vega-ahli",
+   "image": "/products/referencias/vega-ahli.webp"
   },
   {
    "inspiredBy": "Karpos",
    "house": "Ahli",
    "gender": "UNISEX",
-   "slug": "preparada-karpos-ahli"
+   "slug": "preparada-karpos-ahli",
+   "image": "/products/referencias/karpos-ahli.webp"
   },
   {
    "inspiredBy": "Cedrat Boisé",
    "house": "Mancera",
    "gender": "UNISEX",
-   "slug": "preparada-cedrat-boise-mancera"
+   "slug": "preparada-cedrat-boise-mancera",
+   "image": "/products/referencias/cedrat-boise-mancera.webp"
   },
   {
    "inspiredBy": "Amber Oud Dubai Night",
    "house": "Al Haramain",
    "gender": "UNISEX",
-   "slug": "preparada-amber-oud-dubai-night-al-haramain"
+   "slug": "preparada-amber-oud-dubai-night-al-haramain",
+   "image": "/products/referencias/amber-oud-dubai-night-al-haramain.webp"
   },
   {
    "inspiredBy": "Eau de Cartier",
    "house": "Cartier",
    "gender": "UNISEX",
-   "slug": "preparada-eau-de-cartier-cartier"
+   "slug": "preparada-eau-de-cartier-cartier",
+   "image": "/products/referencias/eau-de-cartier-cartier.webp"
   },
   {
    "inspiredBy": "Silver Mountain Water",
    "house": "Creed",
    "gender": "UNISEX",
-   "slug": "preparada-silver-mountain-water-creed"
+   "slug": "preparada-silver-mountain-water-creed",
+   "image": "/products/referencias/silver-mountain-water-creed.webp"
   },
   {
    "inspiredBy": "Intense Café",
    "house": "Montale",
    "gender": "UNISEX",
-   "slug": "preparada-intense-cafe-montale"
+   "slug": "preparada-intense-cafe-montale",
+   "image": "/products/referencias/intense-cafe-montale.webp"
   },
   {
    "inspiredBy": "Il Orgasme",
    "house": "ILMIN Parfums",
    "gender": "UNISEX",
-   "slug": "preparada-il-orgasme-ilmin-parfums"
+   "slug": "preparada-il-orgasme-ilmin-parfums",
+   "image": "/products/referencias/il-orgasme-ilmin-parfums.webp"
   },
   {
    "inspiredBy": "Alexandria II",
    "house": "Xerjoff",
    "gender": "UNISEX",
-   "slug": "preparada-alexandria-ii-xerjoff"
+   "slug": "preparada-alexandria-ii-xerjoff",
+   "image": "/products/referencias/alexandria-ii-xerjoff.webp"
   },
   {
    "inspiredBy": "Exclusive Azure Fantasy",
    "house": "Orientica",
    "gender": "UNISEX",
-   "slug": "preparada-exclusive-azure-fantasy-orientica"
+   "slug": "preparada-exclusive-azure-fantasy-orientica",
+   "image": "/products/referencias/exclusive-azure-fantasy-orientica.webp"
   },
   {
    "inspiredBy": "Royal Amber",
    "house": "Orientica",
    "gender": "UNISEX",
-   "slug": "preparada-royal-amber-orientica"
+   "slug": "preparada-royal-amber-orientica",
+   "image": "/products/referencias/royal-amber-orientica.webp"
   },
   {
    "inspiredBy": "Amber Rouge",
    "house": "Orientica",
    "gender": "UNISEX",
-   "slug": "preparada-amber-rouge-orientica"
+   "slug": "preparada-amber-rouge-orientica",
+   "image": "/products/referencias/amber-rouge-orientica.webp"
   },
   {
    "inspiredBy": "CK One",
    "house": "Calvin Klein",
    "gender": "UNISEX",
-   "slug": "preparada-ck-one-calvin-klein"
+   "slug": "preparada-ck-one-calvin-klein",
+   "image": "/products/referencias/ck-one-calvin-klein.webp"
   },
   {
    "inspiredBy": "XJ 1861 Naxos",
    "house": "Xerjoff",
    "gender": "UNISEX",
-   "slug": "preparada-xj-1861-naxos-xerjoff"
+   "slug": "preparada-xj-1861-naxos-xerjoff",
+   "image": "/products/referencias/xj-1861-naxos-xerjoff.webp"
   },
   {
    "inspiredBy": "Vanilla 28",
    "house": "Kayali",
    "gender": "UNISEX",
-   "slug": "preparada-vanilla-28-kayali"
+   "slug": "preparada-vanilla-28-kayali",
+   "image": "/products/referencias/vanilla-28-kayali.webp"
   },
   {
    "inspiredBy": "Layton",
    "house": "Parfums de Marly",
    "gender": "UNISEX",
-   "slug": "preparada-layton-parfums-de-marly"
+   "slug": "preparada-layton-parfums-de-marly",
+   "image": "/products/referencias/layton-parfums-de-marly.webp"
   },
   {
    "inspiredBy": "Red Tobacco",
    "house": "Mancera",
    "gender": "UNISEX",
-   "slug": "preparada-red-tobacco-mancera"
+   "slug": "preparada-red-tobacco-mancera",
+   "image": "/products/referencias/red-tobacco-mancera.webp"
   },
   {
    "inspiredBy": "Jean Marie Farina Extra Vieille",
    "house": "Roger & Gallet",
    "gender": "UNISEX",
-   "slug": "preparada-jean-marie-farina-extra-vieille-roger-y-gallet"
+   "slug": "preparada-jean-marie-farina-extra-vieille-roger-y-gallet",
+   "image": "/products/referencias/jean-marie-farina-extra-vieille-roger-y-gallet.webp"
   },
   {
    "inspiredBy": "Summer Hammer",
    "house": "Lorenzo Pazzaglia",
    "gender": "UNISEX",
-   "slug": "preparada-summer-hammer-lorenzo-pazzaglia"
+   "slug": "preparada-summer-hammer-lorenzo-pazzaglia",
+   "image": "/products/referencias/summer-hammer-lorenzo-pazzaglia.webp"
   },
   {
    "inspiredBy": "Erba Pura",
    "house": "Xerjoff",
    "gender": "UNISEX",
-   "slug": "preparada-erba-pura-xerjoff"
+   "slug": "preparada-erba-pura-xerjoff",
+   "image": "/products/referencias/erba-pura-xerjoff.webp"
   },
   {
    "inspiredBy": "XJ 1861 Renaissance",
    "house": "Xerjoff",
    "gender": "UNISEX",
-   "slug": "preparada-xj-1861-renaissance-xerjoff"
+   "slug": "preparada-xj-1861-renaissance-xerjoff",
+   "image": "/products/referencias/xj-1861-renaissance-xerjoff.webp"
   },
   {
    "inspiredBy": "God of Fire",
    "house": "Stéphane Humbert Lucas 777",
    "gender": "UNISEX",
-   "slug": "preparada-god-of-fire-stephane-humbert-lucas-777"
+   "slug": "preparada-god-of-fire-stephane-humbert-lucas-777",
+   "image": "/products/referencias/god-of-fire-stephane-humbert-lucas-777.webp"
   },
   {
    "inspiredBy": "Il Monastery",
    "house": "ILMIN Parfums",
    "gender": "UNISEX",
-   "slug": "preparada-il-monastery-ilmin-parfums"
+   "slug": "preparada-il-monastery-ilmin-parfums",
+   "image": "/products/referencias/il-monastery-ilmin-parfums.webp"
   },
   {
    "inspiredBy": "Art of Universe",
    "house": "Lattafa",
    "gender": "UNISEX",
-   "slug": "preparada-art-of-universe-lattafa"
+   "slug": "preparada-art-of-universe-lattafa",
+   "image": "/products/referencias/art-of-universe-lattafa.webp"
   },
   {
    "inspiredBy": "Il Vita",
    "house": "ILMIN Parfums",
    "gender": "UNISEX",
-   "slug": "preparada-il-vita-ilmin-parfums"
+   "slug": "preparada-il-vita-ilmin-parfums",
+   "image": "/products/referencias/il-vita-ilmin-parfums.webp"
   },
   {
    "inspiredBy": "Eclaire Banoffi",
    "house": "Lattafa",
    "gender": "UNISEX",
-   "slug": "preparada-eclaire-banoffi-lattafa"
+   "slug": "preparada-eclaire-banoffi-lattafa",
+   "image": "/products/referencias/eclaire-banoffi-lattafa.webp"
   },
   {
    "inspiredBy": "Eclaire Pistache",
    "house": "Lattafa",
    "gender": "UNISEX",
-   "slug": "preparada-eclaire-pistache-lattafa"
+   "slug": "preparada-eclaire-pistache-lattafa",
+   "image": "/products/referencias/eclaire-pistache-lattafa.webp"
   },
   {
    "inspiredBy": "Chocolate Greedy",
    "house": "Montale",
    "gender": "UNISEX",
-   "slug": "preparada-chocolate-greedy-montale"
+   "slug": "preparada-chocolate-greedy-montale",
+   "image": "/products/referencias/chocolate-greedy-montale.webp"
   },
   {
    "inspiredBy": "Que Chimba!",
    "house": "Lorenzo Pazzaglia",
    "gender": "UNISEX",
-   "slug": "preparada-que-chimba-lorenzo-pazzaglia"
+   "slug": "preparada-que-chimba-lorenzo-pazzaglia",
+   "image": "/products/referencias/que-chimba-lorenzo-pazzaglia.webp"
   }
  ]
 }
